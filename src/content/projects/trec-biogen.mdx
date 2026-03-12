@@ -1,0 +1,28 @@
+---
+title: "TREC BioGen Task-B: Biomedical evidence-based generation systems dashboard"
+date: "2025-09-01"
+summary: "Built a biomedical RAG system with sparse + dense retrieval, Qwen-based generation, and a live viewer for evidence-linked answer inspection."
+tags: ["BioGen", "RAG", "Biomedical QA", "IR"]
+highlight: "Integrated BM25/TF-IDF + MedCPT retrieval, reranking, and citation-linked outputs in a deployable evaluation dashboard."
+links:
+  code: "https://github.com/cbsag"
+  paper: "/papers/trec-2025.pdf"
+  demo: "https://trec-biogen-taskb-viewer.vercel.app/"
+---
+
+## Overview
+Build a biomedical QA system where each generated claim remains traceable to retrieved evidence.
+
+## System design
+- Retrieval stack: BM25/TF-IDF and MedCPT dense retrieval
+- Generator stack: Qwen-based models served via vLLM
+- Multi-stage context building with MMR-style selection and reranking
+
+## What was built
+- End-to-end pipeline for BioGen Task-B submissions
+- Citation-linked answer generation with PubMed evidence traces
+- Interactive results dashboard for run inspection and comparison
+
+## Results
+- Reproducible run artifacts and diagnostics for retrieval/answer quality
+- Better transparency for evidence verification during evaluation

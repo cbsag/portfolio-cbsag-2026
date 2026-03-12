@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+
+  --bg: 231 236 243;
+  --fg: 12 20 33;
+  --muted: 80 92 111;
+  --panel: 252 254 255;
+  --panel-a: 252 254 255;
+  --line: 15 23 42;
+  --glass: 255 255 255;
+
+  --accent-a: 17 132 167;
+  --accent-b: 58 99 255;
+  --accent-c: 249 115 22;
+  --accent: var(--accent-a);
+  --accent2: var(--accent-b);
+  --hot: var(--accent-c);
+
+  --font-body: "IBM Plex Sans", "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  --font-display: "Sora", "Avenir Next", "Segoe UI Variable Display", "Helvetica Neue", sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", "Menlo", "Consolas", monospace;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --bg: 6 8 12;
+  --fg: 244 244 245;
+  --muted: 161 161 170;
+  --panel: 36 46 64;
+  --panel-a: 255 255 255;
+  --line: 255 255 255;
+  --glass: 255 255 255;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  color: rgb(var(--fg));
+  font-family: var(--font-body);
+  background:
+    radial-gradient(780px 420px at 50% -4%, rgba(var(--accent-a), 0.13), transparent 58%),
+    radial-gradient(620px 400px at 12% 14%, rgba(var(--accent-b), 0.08), transparent 60%),
+    radial-gradient(520px 340px at 88% 18%, rgba(243, 247, 253, 0.42), transparent 56%),
+    linear-gradient(180deg, rgba(246, 249, 253, 0.68), rgba(239, 243, 249, 0.46) 28%, rgba(231, 236, 243, 0)),
+    rgb(var(--bg));
+  @apply antialiased;
+}
+
+.dark body {
+  background:
+    radial-gradient(860px 520px at 50% -6%, rgba(var(--accent-a), 0.18), transparent 58%),
+    radial-gradient(720px 420px at 18% 16%, rgba(var(--accent-b), 0.16), transparent 60%),
+    radial-gradient(620px 400px at 82% 22%, rgba(var(--accent-c), 0.10), transparent 56%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)),
+    rgb(var(--bg));
+}
+
+::selection {
+  background: rgba(var(--accent-a), 0.24);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(var(--line), 0.055) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(var(--line), 0.055) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.bg-noise {
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/></filter><rect width='220' height='220' filter='url(%23n)' opacity='.35'/></svg>");
+}
+
+.glow {
+  background:
+    radial-gradient(700px 420px at 45% 20%, rgba(var(--accent-a), 0.16), transparent 60%),
+    radial-gradient(620px 420px at 70% 30%, rgba(var(--accent-b), 0.14), transparent 60%),
+    radial-gradient(560px 420px at 30% 70%, rgba(var(--accent-c), 0.10), transparent 60%);
+}
+
+.bg-gradient-pattern {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(var(--line), 0.06), transparent 48%),
+    repeating-linear-gradient(120deg, rgba(var(--line), 0.035) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(-120deg, rgba(var(--line), 0.025) 0 1px, transparent 1px 34px);
+  -webkit-mask-image: radial-gradient(circle at 50% 42%, black 18%, rgba(0, 0, 0, 0.75) 46%, transparent 78%);
+  mask-image: radial-gradient(circle at 50% 42%, black 18%, rgba(0, 0, 0, 0.75) 46%, transparent 78%);
+}
+
+.dark .bg-gradient-pattern {
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(var(--line), 0.045), transparent 52%),
+    repeating-linear-gradient(120deg, rgba(var(--line), 0.02) 0 1px, transparent 1px 28px),
+    repeating-linear-gradient(-120deg, rgba(var(--line), 0.015) 0 1px, transparent 1px 34px);
+}
+
+.text-mono {
+  font-family: var(--font-mono);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-rendering: geometricPrecision;
+}
+
+.gradient-text {
+  background: linear-gradient(110deg, rgb(var(--accent-a)), rgb(var(--accent-b)), rgb(var(--accent-c)));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.interface-panel {
+  background:
+    linear-gradient(170deg, rgba(var(--panel), 0.99), rgba(245, 250, 255, 0.96)),
+    rgba(var(--panel), 0.98);
+  border: 1px solid rgba(var(--line), 0.24);
+  box-shadow:
+    0 22px 48px -26px rgba(15, 23, 42, 0.34),
+    inset 0 1px 0 rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+}
+
+.dark .interface-panel {
+  background:
+    linear-gradient(172deg, rgba(48, 60, 82, 0.98), rgba(36, 47, 66, 0.97)),
+    rgba(var(--panel), 0.97);
+  border: 1px solid rgba(var(--line), 0.40);
+  outline: 1px solid rgba(var(--line), 0.10);
+  outline-offset: -1px;
+  box-shadow:
+    0 26px 60px -28px rgba(2, 8, 23, 0.94),
+    0 0 0 1px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.interface-hairline {
+  border-top: 1px solid rgba(var(--line), 0.10);
+}
+
+.panel-tint {
+  position: relative;
+  overflow: hidden;
+}
+
+.panel-tint::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 999px;
+}
+
+.panel-tint-project::before {
+  background: rgba(var(--accent-a), 0.38);
+}
+
+.panel-tint-publication::before {
+  background: rgba(var(--accent-b), 0.36);
+}
+
+.panel-tint-experience::before {
+  background: rgba(var(--accent-c), 0.38);
+}
+
+.dark .panel-tint-project::before {
+  background: rgba(var(--accent-a), 0.56);
+}
+
+.dark .panel-tint-publication::before {
+  background: rgba(var(--accent-b), 0.54);
+}
+
+.dark .panel-tint-experience::before {
+  background: rgba(var(--accent-c), 0.56);
+}
+
+.glyph-ring {
+  border: 1px solid rgba(var(--line), 0.10);
+  background: radial-gradient(circle at 50% 50%, rgba(var(--panel-a), 0.08), transparent 65%);
+}
+
+.dark .glyph-ring {
+  background: radial-gradient(circle at 50% 50%, rgba(var(--panel-a), 0.03), transparent 65%);
+}
+
+.prose-tight {
+  @apply prose prose-zinc dark:prose-invert max-w-none;
+  @apply prose-headings:tracking-tight;
+  @apply prose-a:underline prose-a:underline-offset-4;
+  @apply prose-code:before:content-none prose-code:after:content-none;
+}

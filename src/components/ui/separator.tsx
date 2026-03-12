@@ -1,0 +1,1 @@
+export function Separator(){return <div className="my-6 h-px w-full bg-zinc-200/70 dark:bg-zinc-800/70" />;}

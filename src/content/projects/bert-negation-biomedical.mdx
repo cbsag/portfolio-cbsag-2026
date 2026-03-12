@@ -1,0 +1,24 @@
+---
+title: "Evaluating BERT-based models for negation detection in biomedical texts"
+date: "2024-07-01"
+summary: "Fine-tuned BERT, BioBERT, and ClinicalBERT on BIOSCOPE for negation/speculation detection with BIO tagging and span-aware evaluation."
+tags: ["Biomedical NLP", "BERT", "Negation", "Sequence Labeling"]
+highlight: "Observed strong baseline robustness from vanilla BERT across token, span, and CRF-style evaluation metrics."
+links:
+  code: "https://github.com/cbsag/Negation-Cue-and-Scope-Spans-Detection"
+  paper: ""
+  demo: ""
+---
+
+## Overview
+Detect negation and speculation cues in biomedical text with consistent sequence labeling.
+
+## System design
+- Models: BERT, BioBERT, ClinicalBERT
+- Dataset: BIOSCOPE
+- Labeling: BIO tagging with token and span-level checks
+- Training/evaluation designed around token and span-level consistency
+
+## Results
+- Compared domain-specific vs general-purpose encoder behavior
+- Established a strong baseline for later biomedical assertion-quality work
