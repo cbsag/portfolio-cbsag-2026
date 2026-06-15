@@ -12,6 +12,7 @@ const links = [
   { href: "/projects", label: "Projects" },
   { href: "/experience", label: "Experience" },
   { href: "/publications", label: "Publications" },
+  { href: "/cv", label: "CV" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" }
 ];
@@ -45,12 +46,6 @@ export default function Nav() {
               </Link>
             );
           })}
-          <a
-            className="inline-flex items-center rounded-full px-3 py-1.5 text-[rgb(var(--muted))] transition hover:bg-[rgba(var(--line),0.06)] hover:text-[rgb(var(--fg))]"
-            href="/cv.pdf"
-          >
-            Resume
-          </a>
         </nav>
 
         <Button

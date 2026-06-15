@@ -1,9 +1,9 @@
 ---
-title: "MedHopQA: Agentic and non-agentic multi-hop systems for medical QA"
+title: "Agentic and non-agentic multi-hop medical question answering"
 date: "2025-08-14"
-summary: "A multi-hop biomedical QA project comparing agentic and non-agentic retrieval-generation strategies for evidence-linked answering."
-tags: ["Multi-hop", "Biomedical QA", "RAG", "BioCreative"]
-highlight: "Compared retrieval/control strategies while tracking answer quality and citation behavior under the same evaluation setup."
+summary: "Built three multi-hop QA systems combining open-source LLMs with Wikipedia and PubMed retrieval, then compared agentic and controlled non-agentic workflows."
+tags: ["Multi-hop", "LLMs", "Retrieval", "Medical QA", "BioCreative"]
+highlight: "The Wikipedia-and-PubMed pipeline performed best on the development set and became part of a BioCreative IX publication."
 links:
   code: ""
   paper: "https://zenodo.org/records/16875905"
@@ -11,14 +11,15 @@ links:
 ---
 
 ## Overview
-How do agentic and non-agentic multi-hop pipelines differ in biomedical QA quality and evidence use?
+How do agentic and non-agentic multi-hop pipelines differ in medical QA accuracy, evidence use, and reliability?
 
 ## System design
-- Query reformulation and retrieval
-- Multi-hop evidence expansion
-- Optional reranking and context control
-- Answer generation with evidence constraints
+- Developed three multi-hop systems combining open-source LLMs with Wikipedia and PubMed retrieval
+- Implemented an agentic workflow with smolagents and Qwen2.5-Coder-32B
+- Built controlled non-agentic pipelines for evidence retrieval, reranking, and answer extraction
+- Compared short-answer accuracy, evidence use, and reliability under the same evaluation setup
 
 ## Results
-- Unified framework for side-by-side strategy comparison
-- Evaluation-ready outputs for publication analysis
+- Published the results at BioCreative IX / IJCAI 2025
+- Identified the best-performing retrieval configuration for the development set
+- Produced a side-by-side analysis framework for agentic vs non-agentic system behavior

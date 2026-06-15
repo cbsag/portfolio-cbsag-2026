@@ -15,10 +15,10 @@ export const experiences: ExperienceItem[] = [
     location: "Montreal, Canada",
     period: "09/2023 - Present",
     bullets: [
-      "Work on information retrieval, biomedical text analysis, and retrieval-augmented generation with LLMs and PLMs.",
-      "Built systems for MedHopQA and TREC BioGen Task-B with evidence-linked generation pipelines.",
-      "Created annotation and preprocessing pipelines using GATE for structured analysis.",
-      "Collaborated on retrieval workflows for corpus-based journalism research."
+      "Develop classification, sequence-labeling, span-prediction, and information extraction systems with Python, PyTorch, Transformers, CRFsuite, and scikit-learn.",
+      "Built hierarchical and PPO-based approaches for class-imbalanced negation detection and related biomedical NLP analysis.",
+      "Designed sparse and dense retrieval pipelines with BM25, Pyserini/Lucene, MedCPT, FAISS, cross-encoder reranking, and TF-IDF/MMR.",
+      "Processed 26.8 million PubMed documents and built evaluation workflows for answer accuracy, retrieval quality, evidence grounding, and citation reliability."
     ]
   },
   {
@@ -26,12 +26,11 @@ export const experiences: ExperienceItem[] = [
     role: "Teaching Assistant",
     organization: "Concordia University",
     location: "Montreal, Canada",
-    period: "09/2024 - Present",
+    period: "09/2024 - 05/2026",
     bullets: [
-      "Teaching Assistant for COMP 479/6791 (Information Retrieval and Web Search).",
-      "Teaching Assistant for COMP 232 (Mathematics for Computer Science).",
-      "Support coursework, assignment feedback, project development, and grading.",
-      "Help students translate core IR concepts into practical implementations."
+      "Supported COMP 479 (Information Retrieval and Web Search) and COMP 232 (Discrete Mathematics) through tutorials, office hours, grading, and assignment guidance.",
+      "Helped undergraduate and graduate students translate core information retrieval and discrete mathematics concepts into working solutions.",
+      "Provided technical clarification on assignments, evaluation criteria, and project implementation details."
     ]
   },
   {
@@ -41,43 +40,20 @@ export const experiences: ExperienceItem[] = [
     location: "Chennai, India",
     period: "07/2022 - 08/2023",
     bullets: [
-      "Developed product features for the Kissflow Procurement Cloud team.",
-      "Integrated backend scripts in a low-code/no-code platform architecture.",
-      "Worked on workflow automation and software testing for stable deployments."
+      "Developed application features and workflow automation for Kissflow Procurement Cloud across purchasing, approvals, supplier management, and source-to-pay flows.",
+      "Designed workflow rules, forms, validations, and approval paths from business requirements in Kissflow's low-code platform.",
+      "Built API services on Google Cloud Platform and partnered with backend and product teams to integrate procurement data and ship tested features."
     ]
   },
   {
     id: "basik-intern",
-    role: "Software Engineering Intern (Backend)",
+    role: "Software Engineering Intern",
     organization: "Basik Marketing Pvt Ltd",
     location: "Chennai, India",
     period: "05/2022 - 07/2022",
     bullets: [
-      "Built backend components for The Esports Club platform.",
-      "Evaluated platform specifications and implemented performance-oriented services.",
-      "Supported production reliability for gaming and esports use cases."
-    ]
-  },
-  {
-    id: "solarillion-ra",
-    role: "Undergraduate Research Assistant",
-    organization: "Solarillion Foundation",
-    location: "India",
-    period: "01/2021 - 01/2022",
-    bullets: [
-      "Developed a two-stage machine learning engine for flight delay prediction.",
-      "Worked on citation intent classification and supervised text analysis tasks."
-    ]
-  },
-  {
-    id: "pals-intern",
-    role: "Software Engineering Intern",
-    organization: "PALS (Initiative by Alumni Fraternity of IITs)",
-    location: "India",
-    period: "01/2021 - 06/2021",
-    bullets: [
-      "Developed a simulator for Synchro-Transmitter and Receiver Characteristics experiments.",
-      "Built under NIT Karnataka supervision with Ministry of Education guideline compliance."
+      "Developed a real-time esports broadcast overlay using Python and Node.js.",
+      "Built backend logic that updated match and event counters dynamically during live streams."
     ]
   }
 ];

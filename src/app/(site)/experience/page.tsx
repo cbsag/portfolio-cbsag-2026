@@ -8,11 +8,11 @@ export default function ExperiencePage() {
     <div className="container pt-10">
       <h1 className="text-3xl font-semibold tracking-tight">Experience</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
-        Roles across research, teaching, and software engineering.
+        Research, teaching, and product engineering roles from my current CV.
       </p>
 
       <div className="mt-10">
-        <SectionHeader eyebrow="Timeline" title="Professional experience" desc="Every role listed in my CV." />
+        <SectionHeader eyebrow="Timeline" title="Professional experience" desc="Every role from the current CV, summarized for the web." />
         <div className="space-y-4">
           {experiences.map((item, index) => (
             <Reveal key={item.id} delay={0.03 * index}>

@@ -1,9 +1,9 @@
 ---
-title: "TREC BioGen Task-B: Biomedical evidence-based generation systems dashboard"
+title: "TREC BioGen: Evidence-grounded RAG and LLM evaluation system"
 date: "2025-09-01"
-summary: "Built a biomedical RAG system with sparse + dense retrieval, Qwen-based generation, and a live viewer for evidence-linked answer inspection."
-tags: ["BioGen", "RAG", "Biomedical QA", "IR"]
-highlight: "Integrated BM25/TF-IDF + MedCPT retrieval, reranking, and citation-linked outputs in a deployable evaluation dashboard."
+summary: "Built and evaluated sparse and dense RAG pipelines over 26.8 million PubMed documents, with Qwen-based generation, reranking, and a dashboard for evidence-linked inspection."
+tags: ["RAG", "Information Retrieval", "LLMs", "Evaluation", "Biomedical QA"]
+highlight: "Combined BM25, Pyserini, MedCPT, reranking, and feedback-driven analysis into a deployable evaluation workflow and live viewer."
 links:
   code: "https://github.com/cbsag"
   paper: "/papers/trec-2025.pdf"
@@ -11,18 +11,20 @@ links:
 ---
 
 ## Overview
-Build a biomedical QA system where each generated claim remains traceable to retrieved evidence.
+Build a biomedical QA system where each generated claim remains traceable to retrieved evidence and easy to inspect during evaluation.
 
 ## System design
-- Retrieval stack: BM25/TF-IDF and MedCPT dense retrieval
-- Generator stack: Qwen-based models served via vLLM
-- Multi-stage context building with MMR-style selection and reranking
+- Sparse and dense retrieval over a 26.8 million document PubMed corpus
+- BM25, Pyserini/Lucene, MedCPT, TF-IDF/MMR, FAISS, and cross-encoder reranking
+- Qwen-based generation served on GPU infrastructure through vLLM and Slurm
+- Human and AI feedback loops to refine reformulation, ranking, and answer generation behavior
 
 ## What was built
-- End-to-end pipeline for BioGen Task-B submissions
+- End-to-end pipeline for TREC BioGen Task-B submissions
 - Citation-linked answer generation with PubMed evidence traces
-- Interactive results dashboard for run inspection and comparison
+- Interactive dashboard for comparing runs, inspecting outputs, and debugging evidence quality
 
 ## Results
-- Reproducible run artifacts and diagnostics for retrieval/answer quality
-- Better transparency for evidence verification during evaluation
+- Contributed to a published TREC 2025 system paper
+- Produced reusable diagnostics for answer accuracy, retrieval quality, evidence grounding, and citation reliability
+- Made system behavior easier to inspect for both manual review and shared-task iteration

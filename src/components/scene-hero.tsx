@@ -46,10 +46,10 @@ export default function SceneHero() {
                 <AccentButton>View Work</AccentButton>
               </a>
               <a
-                href="/cv.pdf"
+                href={site.links.resume}
                 className="inline-flex h-10 items-center justify-center rounded-xl border border-[rgba(var(--line),0.18)] px-4 text-sm font-medium tracking-tight text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--panel-a),0.06)]"
               >
-                Resume
+                View CV
               </a>
             </div>
 

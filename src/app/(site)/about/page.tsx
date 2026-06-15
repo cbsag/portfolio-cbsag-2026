@@ -12,8 +12,8 @@ export default function AboutPage() {
     <div className="container pt-10">
       <h1 className="text-3xl font-semibold tracking-tight">About</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
-        The short version: I build retrieval-first AI systems and production software, with research depth and
-        engineering delivery.
+        The short version: I build machine learning, NLP, retrieval, and software systems with research depth and
+        delivery discipline.
       </p>
 
       <div className="mt-10 space-y-6">
@@ -21,16 +21,16 @@ export default function AboutPage() {
           <SectionHeader
             eyebrow="Focus"
             title="What I work on"
-            desc="TREC-style retrieval systems, evidence-linked QA, output viewers, and evaluation workflows."
+            desc="Machine learning, retrieval, evaluation, data workflows, APIs, and interfaces."
           />
           <Reveal>
             <Panel className="panel-tint panel-tint-project p-6">
               <p className="leading-relaxed text-zinc-700 dark:text-zinc-200">
-                I&apos;m {site.name}. I&apos;m a graduate student at Concordia working across biomedical retrieval, RAG,
-                and practical NLP tooling, with a strong interest in bioinformatics-adjacent problems. My recent work
-                focuses on systems where the evidence path is visible and the outputs can be inspected by humans. That
-                includes the TREC BioGen Task-B pipeline, a live results viewer, and diagnostics for retrieval and
-                citation quality.
+                I&apos;m {site.name}. I&apos;m completing a master&apos;s thesis at Concordia on evidence-grounded
+                biomedical question answering, and that research sharpened how I think about retrieval, evaluation,
+                and reliability. My work is broader than one domain, though: I build and evaluate ML systems, NLP
+                pipelines, ranking workflows, dashboards, APIs, and practical tools that make models easier to inspect
+                and use. I am currently looking for full-time ML, NLP, AI, or software roles starting July 2026.
               </p>
             </Panel>
           </Reveal>
@@ -60,6 +60,7 @@ export default function AboutPage() {
           <Reveal>
             <Panel className="panel-tint panel-tint-publication p-5">
               <div className="flex flex-wrap gap-4 text-sm text-zinc-700 dark:text-zinc-200">
+                <a className="underline underline-offset-4" href={site.links.resume}>CV</a>
                 <a className="underline underline-offset-4" href={`mailto:${site.email}`}>Email</a>
                 <a className="underline underline-offset-4" href={site.links.github}>GitHub</a>
                 <a className="underline underline-offset-4" href={site.links.linkedin}>LinkedIn</a>

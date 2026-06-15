@@ -4,8 +4,8 @@ import AccentButton from "@/components/accent-button";
 
 export default function WorkRail() {
   const projects = getAllDocs("projects");
-  const featured = projects[0];
-  const secondary = projects.slice(1, 3);
+  const featured = projects.find((project) => project.slug === "trec-biogen") ?? projects[0];
+  const secondary = projects.filter((project) => project.slug !== featured?.slug).slice(0, 2);
 
   const featuredCode =
     typeof featured?.frontmatter?.links?.code === "string" && !featured.frontmatter.links.code.includes("<")
@@ -25,7 +25,7 @@ export default function WorkRail() {
             <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Featured</div>
             <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Selected work</h2>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              One strong case study first. The rest stays light and scannable.
+              Recent case studies across retrieval, evaluation, applied NLP, and production-minded software work.
             </p>
           </div>
 

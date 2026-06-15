@@ -1,0 +1,25 @@
+---
+title: "Knowledge-graph and hybrid retrieval for course enrollment QA"
+date: "2024-11-01"
+summary: "Built a question-answering system for course enrollment using RDF and SPARQL alongside LangChain and FAISS for hybrid retrieval."
+tags: ["Knowledge Graphs", "Retrieval", "Question Answering", "LangChain", "RDF"]
+highlight: "Compared graph-based, vector-based, and hybrid retrieval modes for natural-language enrollment questions."
+links:
+  code: ""
+  paper: ""
+  demo: ""
+---
+
+## Overview
+Answer course-enrollment questions with a system that can combine structured academic rules and semantic search.
+
+## System design
+- Modeled course, prerequisite, and program information as RDF triples
+- Queried structured relationships with SPARQL for deterministic factual lookup
+- Added LangChain and FAISS for semantic retrieval over course descriptions and related text
+- Combined graph-based and vector-based retrieval into a hybrid answering flow
+
+## Results
+- Compared graph-only, vector-only, and hybrid retrieval behavior on enrollment questions
+- Improved coverage for questions that mixed strict prerequisites with natural-language intent
+- Built a reusable hybrid retrieval pattern for domain-specific QA tasks

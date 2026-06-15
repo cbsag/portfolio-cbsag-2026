@@ -18,11 +18,11 @@ export default function ProjectsPage() {
     <div className="container pt-10">
       <h1 className="text-3xl font-semibold tracking-tight">Projects</h1>
       <p className="mt-2 max-w-2xl text-zinc-600 dark:text-zinc-400">
-        Case studies with artifacts. Filter by tag.
+        Selected systems, experiments, and production-minded builds across AI and software engineering.
       </p>
 
       <div className="mt-10">
-        <SectionHeader eyebrow="Browse" title="Projects" desc="Click a tag to filter." />
+        <SectionHeader eyebrow="Browse" title="Projects" desc="Filter by area, or scan the full list." />
         <ProjectsFilter items={items} basePath="/projects" />
       </div>
     </div>

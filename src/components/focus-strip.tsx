@@ -7,35 +7,37 @@ export default function FocusStrip() {
             <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
               Current focus
             </div>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Retrieval, diagnostics, evaluation</h3>
+            <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+              Finishing my thesis and looking for full-time roles
+            </h3>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              Systems that are inspectable: stronger retrieval, clearer evidence paths, and outputs that are easier to
-              trust.
+              I am wrapping up an MCompSc thesis on evidence-grounded biomedical question answering, but the work I am
+              targeting next is broader: ML, NLP, AI evaluation, and software systems that need strong engineering.
             </p>
 
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
-              <div>• Evidence-constrained biomedical QA and RAG evaluation</div>
-              <div>• Retrieval ranking, citation faithfulness, and answer reliability</div>
-              <div>• NLP signals like entities, negation, scope, and failure traces</div>
+              <div>- Full-time ML, NLP, applied AI, or software engineering roles starting July 2026</div>
+              <div>- Retrieval, ranking, evaluation, and evidence-grounded language systems</div>
+              <div>- End-to-end delivery spanning modeling, APIs, dashboards, and analysis tooling</div>
             </div>
           </div>
 
           <div className="interface-panel panel-tint panel-tint-project p-6">
             <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
-              What I am building now
+              What I bring
             </div>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
               <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Biomedical RAG systems:</span> retrieval +
-                generation pipelines with transparent citation flow.
+                <span className="font-medium text-[rgb(var(--fg))]">Applied AI research:</span> model fine-tuning,
+                sequence labeling, information extraction, retrieval, and QA system design.
               </div>
               <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Evaluation tooling:</span> better debugging for
-                retrieval quality, hallucination risk, and evidence coverage.
+                <span className="font-medium text-[rgb(var(--fg))]">Evaluation and analysis:</span> shared-task
+                baselines, error analysis, LLM and human feedback loops, and inspection dashboards.
               </div>
               <div>
-                <span className="font-medium text-[rgb(var(--fg))]">NLP diagnostics:</span> entity, negation, and
-                scope signals to improve model reliability.
+                <span className="font-medium text-[rgb(var(--fg))]">Software delivery:</span> Python, React, Node.js,
+                APIs, cloud workflows, and practical tools that make models usable.
               </div>
             </div>
           </div>

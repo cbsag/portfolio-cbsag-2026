@@ -1,8 +1,8 @@
 "use client";
 import { useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Panel } from "@/components/ui/panel";
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 export type CardItem = {
@@ -15,37 +15,97 @@ export type CardItem = {
   links?: { code?: string; paper?: string; demo?: string };
 };
 
+const FILTERS = [
+  {
+    label: "All",
+    matches: () => true
+  },
+  {
+    label: "LLMs",
+    matches: (item: CardItem) => ["LLMs", "RAG", "BioCreative", "Shared Task"].some((tag) => item.tags.includes(tag))
+  },
+  {
+    label: "Retrieval",
+    matches: (item: CardItem) =>
+      [
+        "Retrieval",
+        "Information Retrieval",
+        "RAG",
+        "Question Answering",
+        "Knowledge Graphs",
+        "RDF",
+        "LangChain",
+        "Medical QA",
+        "Biomedical QA",
+        "Multi-hop"
+      ].some((tag) => item.tags.includes(tag))
+  },
+  {
+    label: "NLP",
+    matches: (item: CardItem) =>
+      ["NLP", "Biomedical NLP", "Clinical NLP", "Sequence Labeling", "Evidence Extraction", "Transformers"].some(
+        (tag) => item.tags.includes(tag)
+      )
+  },
+  {
+    label: "Applied ML",
+    matches: (item: CardItem) =>
+      ["Applied AI", "Machine Learning", "Deep Learning", "Forecasting", "Classification", "RL"].some((tag) =>
+        item.tags.includes(tag)
+      )
+  },
+  {
+    label: "Systems",
+    matches: (item: CardItem) =>
+      ["Systems", "Computer Architecture", "Security", "Authentication", "Identity", "Patent"].some((tag) =>
+        item.tags.includes(tag)
+      )
+  },
+  {
+    label: "Research",
+    matches: (item: CardItem) =>
+      ["BioCreative", "Shared Task", "Biomedical QA", "Medical QA", "Information Retrieval", "Clinical NLP"].some(
+        (tag) => item.tags.includes(tag)
+      )
+  }
+] as const;
+
 export default function ProjectsFilter({ items, basePath }: { items: CardItem[]; basePath: string }) {
-  const allTags = useMemo(() => {
-    const s = new Set<string>();
-    items.forEach((it) => (it.tags ?? []).forEach((t) => s.add(t)));
-    return Array.from(s).sort((a, b) => a.localeCompare(b));
+  const filters = useMemo(() => {
+    return FILTERS.filter((filter) => filter.label === "All" || items.some((item) => filter.matches(item)));
   }, [items]);
 
   const [activeTag, setActiveTag] = useState<string>("All");
 
   const filtered = useMemo(() => {
-    if (activeTag === "All") return items;
-    return items.filter((it) => (it.tags ?? []).includes(activeTag));
-  }, [items, activeTag]);
+    const selectedFilter = filters.find((filter) => filter.label === activeTag) ?? FILTERS[0];
+    return items.filter((item) => selectedFilter.matches(item));
+  }, [filters, items, activeTag]);
 
   return (
     <div className="space-y-5">
-      <div className="flex flex-wrap gap-2">
-        <Button size="sm" variant={activeTag === "All" ? "default" : "outline"} onClick={() => setActiveTag("All")}>
-          All
-        </Button>
-        {allTags.map((t) => (
-          <Button
-            key={t}
-            size="sm"
-            variant={activeTag === t ? "default" : "outline"}
-            onClick={() => setActiveTag(t)}
-            className="text-mono"
-          >
-            {t}
-          </Button>
-        ))}
+      <div className="rounded-2xl border border-[rgba(var(--line),0.10)] bg-[rgba(var(--panel-a),0.05)] p-2">
+        <div className="flex flex-wrap gap-2">
+          {filters.map((filter) => {
+            const tag = filter.label;
+            const active = activeTag === tag;
+            return (
+              <button
+                key={tag}
+                type="button"
+                onClick={() => setActiveTag(tag)}
+                className={cn(
+                  "inline-flex h-8 items-center rounded-full border px-3 text-[11px] font-medium tracking-[0.08em] text-mono transition sm:text-xs",
+                  active
+                    ? "border-[rgba(var(--accent-a),0.30)] bg-[rgba(var(--accent-a),0.12)] text-[rgb(var(--fg))]"
+                    : "border-[rgba(var(--line),0.12)] bg-[rgba(var(--panel-a),0.08)] text-[rgb(var(--muted))] hover:border-[rgba(var(--line),0.20)] hover:text-[rgb(var(--fg))]"
+                )}
+              >
+                {tag}
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       <div className="grid gap-4 md:grid-cols-2">
@@ -59,6 +119,11 @@ export default function ProjectsFilter({ items, basePath }: { items: CardItem[];
 
             <div className="mt-3 flex items-start justify-between gap-4">
               <div>
+                {p.date ? (
+                  <div className="text-xs uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 text-mono">
+                    {p.date.slice(0, 4)}
+                  </div>
+                ) : null}
                 <h3 className="text-lg font-semibold tracking-tight">{p.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{p.summary}</p>
               </div>
