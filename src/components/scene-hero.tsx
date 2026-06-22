@@ -13,7 +13,7 @@ export default function SceneHero() {
   const opacity = useTransform(scrollY, [0, 420], [1, 0.92]);
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden">
+    <section className="relative min-h-[calc(100svh-3.5rem)] overflow-hidden sm:min-h-[calc(94svh-3.5rem)]">
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-40 dark:opacity-35" />
       <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.06] dark:opacity-[0.10]" />
       <div className="pointer-events-none absolute inset-0 glow opacity-85 dark:opacity-95 animate-drift" />
@@ -27,21 +27,24 @@ export default function SceneHero() {
       />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[rgba(var(--panel-a),0.22)] to-transparent dark:from-transparent" />
 
-      <motion.div style={{ y, scale, opacity }} className="relative z-10 flex min-h-[100svh] items-center justify-center">
-        <div className="container w-full py-12">
-          <div className="mx-auto flex max-w-[820px] flex-col items-center text-center">
+      <motion.div
+        style={{ y, scale, opacity }}
+        className="relative z-10 flex min-h-[calc(100svh-3.5rem)] items-center justify-center sm:min-h-[calc(94svh-3.5rem)]"
+      >
+        <div className="container w-full py-8 sm:py-10">
+          <div className="mx-auto flex max-w-[780px] flex-col items-center text-center">
             <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">{site.tagline}</div>
 
-            <div className="mt-8 w-full">
+            <div className="mt-6 w-full sm:mt-7">
               <RetrievalGlyph />
             </div>
 
-            <h1 className="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">{site.headline}</h1>
+            <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-5xl">{site.headline}</h1>
             <p className="mt-4 max-w-[640px] text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
               {site.subheadline}
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
               <a href="#enter">
                 <AccentButton>View Work</AccentButton>
               </a>
@@ -53,7 +56,7 @@ export default function SceneHero() {
               </a>
             </div>
 
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-xs text-[rgb(var(--muted))]">
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs text-[rgb(var(--muted))]">
               <span className="text-mono">{site.role}</span>
               <span className="h-1 w-1 rounded-full bg-[rgba(var(--line),0.18)]" />
               <span>{site.location}</span>
@@ -61,7 +64,7 @@ export default function SceneHero() {
               <span>{site.availability}</span>
             </div>
 
-            <div className="mt-10 flex items-center gap-3 text-xs text-[rgb(var(--muted))]">
+            <div className="mt-8 flex items-center gap-3 text-xs text-[rgb(var(--muted))]">
               <span className="text-mono">Scroll to enter</span>
               <span className="relative inline-block h-[18px] w-[10px] rounded-full border border-[rgba(var(--line),0.18)]">
                 <span className="absolute left-1/2 top-[4px] h-[4px] w-[4px] rounded-full bg-[rgba(var(--line),0.35)] animate-breathe" />
