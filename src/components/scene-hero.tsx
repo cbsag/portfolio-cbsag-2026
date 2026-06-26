@@ -56,12 +56,14 @@ export default function SceneHero() {
               </a>
             </div>
 
-            <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs text-[rgb(var(--muted))]">
+            <div className="mt-5 inline-flex items-center rounded-full border border-[rgba(var(--line),0.12)] bg-[rgba(var(--panel-a),0.28)] px-4 py-2 text-[11px] font-medium tracking-[0.08em] text-[rgb(var(--muted))] text-mono backdrop-blur-sm sm:text-xs">
+              {site.availability}
+            </div>
+
+            <div className="mt-7 flex flex-wrap items-center justify-center gap-3 text-xs text-[rgb(var(--muted))]">
               <span className="text-mono">{site.role}</span>
               <span className="h-1 w-1 rounded-full bg-[rgba(var(--line),0.18)]" />
               <span>{site.location}</span>
-              <span className="h-1 w-1 rounded-full bg-[rgba(var(--line),0.18)]" />
-              <span>{site.availability}</span>
             </div>
 
             <div className="mt-8 flex items-center gap-3 text-xs text-[rgb(var(--muted))]">

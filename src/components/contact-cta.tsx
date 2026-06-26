@@ -9,8 +9,8 @@ export default function ContactCTA() {
           <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Contact</div>
           <div className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Let&apos;s talk</div>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-            I am looking for full-time ML, NLP, AI, and software engineering roles starting July 2026. If you are
-            hiring for research-minded engineering work, I&apos;d be happy to connect.
+            If you&apos;re hiring for research-minded ML, NLP, evaluation, or software engineering work, I&apos;d be
+            happy to connect.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
