@@ -1,0 +1,28 @@
+---
+title: "BioEvidence AI: Local-First Biomedical Question Answering"
+date: "2026-08-01"
+summary: "A real-time biomedical question-answering system that retrieves evidence from a 14.9M-record PubMed index and generates citation-linked answers with local LLMs."
+tags: ["RAG", "Pyserini", "Lucene", "Local LLMs", "Next.js"]
+highlight: "Built a private, on-device query-to-citation workflow with integrations for PubMed, Europe PMC, and ClinicalTrials.gov."
+links:
+  code: ""
+  paper: ""
+  demo: "https://bioevidence.cbsag.me/"
+---
+
+## Overview
+BioEvidence turns biomedical questions into evidence-linked answers while keeping model inference local and the retrieval trail visible.
+
+## System design
+- Pyserini/Lucene retrieval over a 14.9M-record PubMed index
+- Adaptive reranking and evidence selection
+- Local LLM generation with on-device inference
+- Live integrations with PubMed/NCBI, Europe PMC, and ClinicalTrials.gov
+
+## What was built
+- Real-time query-to-citation pipeline
+- User-facing Next.js application for answer and evidence inspection
+- Local-first inference path designed for privacy and control
+
+## Result
+A research system translated into a practical AI application with inspectable evidence and direct links to biomedical sources.

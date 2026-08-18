@@ -4,7 +4,7 @@ import AccentButton from "@/components/accent-button";
 
 export default function WorkRail() {
   const projects = getAllDocs("projects");
-  const featured = projects.find((project) => project.slug === "trec-biogen") ?? projects[0];
+  const featured = projects.find((project) => project.slug === "bioevidence-ai") ?? projects[0];
   const secondary = projects.filter((project) => project.slug !== featured?.slug).slice(0, 2);
 
   const featuredCode =
@@ -63,7 +63,7 @@ export default function WorkRail() {
                     className="text-sm text-[rgb(var(--muted))] underline underline-offset-4 transition hover:text-[rgb(var(--fg))]"
                     href={featuredDemo}
                   >
-                    Live viewer
+                    Live demo
                   </a>
                 ) : null}
                 {featuredCode ? (

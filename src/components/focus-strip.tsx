@@ -8,15 +8,15 @@ export default function FocusStrip() {
               Current focus
             </div>
             <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-              Finishing my thesis and looking for full-time roles
+              Evidence-grounded AI, from research to deployment
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              I am wrapping up an MCompSc thesis on evidence-grounded biomedical question answering, but the work I am
-              targeting next is broader: ML, NLP, AI evaluation, and software systems that need strong engineering.
+              I defended my MCompSc thesis on evidence-grounded biomedical question answering in August 2026. I am now
+              focused on ML, NLP, retrieval, AI evaluation, and software systems that need strong engineering.
             </p>
 
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
-              <div>- Full-time ML, NLP, applied AI, or software engineering roles starting July 2026</div>
+              <div>- Open to full-time AI/ML, NLP, information retrieval, and software engineering roles</div>
               <div>- Retrieval, ranking, evaluation, and evidence-grounded language systems</div>
               <div>- End-to-end delivery spanning modeling, APIs, dashboards, and analysis tooling</div>
             </div>

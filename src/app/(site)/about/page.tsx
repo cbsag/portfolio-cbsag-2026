@@ -28,10 +28,10 @@ export default function AboutPage() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-zinc-700 dark:text-zinc-200 sm:text-base">
-                I&apos;m {site.name}. I&apos;m completing a master&apos;s thesis at Concordia on evidence-grounded
-                biomedical question answering, and that work sharpened how I think about retrieval, evaluation, and
-                reliability. More broadly, I build and evaluate ML systems, NLP pipelines, ranking workflows,
-                dashboards, APIs, and practical tools that make models easier to inspect and use.
+                I&apos;m {site.name}, an AI/ML engineer and Research Assistant at Concordia University. I completed my
+                Master of Computer Science thesis, <em>Evidence-Grounded Biomedical Question Answering: Design,
+                Analysis, and Evaluation</em>, in August 2026. That work sharpened how I think about retrieval,
+                evaluation, grounding, and citation reliability.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-base">
                 I do my best work where research depth and engineering constraints both matter. The projects that fit
@@ -149,6 +149,12 @@ export default function AboutPage() {
                         href={site.links.linkedin}
                       >
                         LinkedIn
+                      </a>
+                      <a
+                        className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"
+                        href={site.links.bioEvidence}
+                      >
+                        BioEvidence
                       </a>
                       <a
                         className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"

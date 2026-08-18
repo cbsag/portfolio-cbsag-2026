@@ -13,12 +13,12 @@ export const experiences: ExperienceItem[] = [
     role: "Research Assistant",
     organization: "CLaC Lab, Concordia University",
     location: "Montreal, Canada",
-    period: "09/2023 - Present",
+    period: "Sep 2023 - Present",
     bullets: [
-      "Develop classification, sequence-labeling, span-prediction, and information extraction systems with Python, PyTorch, Transformers, CRFsuite, and scikit-learn.",
-      "Built hierarchical and PPO-based approaches for class-imbalanced negation detection and related biomedical NLP analysis.",
-      "Designed sparse and dense retrieval pipelines with BM25, Pyserini/Lucene, MedCPT, FAISS, cross-encoder reranking, and TF-IDF/MMR.",
-      "Processed 26.8 million PubMed documents and built evaluation workflows for answer accuracy, retrieval quality, evidence grounding, and citation reliability."
+      "Built retrieval and QA pipelines over 26.8M PubMed documents using BM25, MedCPT, cross-encoder reranking, and evidence selection.",
+      "Ran quantized Qwen inference on GPU-based HPC using vLLM and Slurm for large-scale generation and evaluation.",
+      "Developed evaluation workflows to separate retrieval, answer quality, grounding, and citation failures for TREC and BioCreative shared-task systems.",
+      "Trained BERT-family, CRF, hierarchical, and PPO models for sequence labeling, and built NER pipelines across biomedical and news text."
     ]
   },
   {
@@ -26,11 +26,10 @@ export const experiences: ExperienceItem[] = [
     role: "Teaching Assistant",
     organization: "Concordia University",
     location: "Montreal, Canada",
-    period: "09/2024 - 05/2026",
+    period: "Sep 2024 - May 2026",
     bullets: [
-      "Supported COMP 479 (Information Retrieval and Web Search) and COMP 232 (Discrete Mathematics) through tutorials, office hours, grading, and assignment guidance.",
-      "Helped undergraduate and graduate students translate core information retrieval and discrete mathematics concepts into working solutions.",
-      "Provided technical clarification on assignments, evaluation criteria, and project implementation details."
+      "Led tutorials and office hours for Information Retrieval and Web Search (COMP 479/6791) and Discrete Mathematics (COMP 232).",
+      "Supported assignments, grading, and technical questions."
     ]
   },
   {
@@ -38,11 +37,10 @@ export const experiences: ExperienceItem[] = [
     role: "Solution Developer",
     organization: "OrangeScape Technologies Pvt Ltd",
     location: "Chennai, India",
-    period: "07/2022 - 08/2023",
+    period: "Jul 2022 - Aug 2023",
     bullets: [
-      "Developed application features and workflow automation for Kissflow Procurement Cloud across purchasing, approvals, supplier management, and source-to-pay flows.",
-      "Designed workflow rules, forms, validations, and approval paths from business requirements in Kissflow's low-code platform.",
-      "Built API services on Google Cloud Platform and partnered with backend and product teams to integrate procurement data and ship tested features."
+      "Developed procurement workflows and product features for Kissflow Procurement Cloud across purchasing, approvals, supplier management, and source-to-pay processes.",
+      "Built API services on Google Cloud Platform and translated business requirements into workflow rules, validations, and approval paths with backend and product teams."
     ]
   },
   {
@@ -50,10 +48,9 @@ export const experiences: ExperienceItem[] = [
     role: "Software Engineering Intern",
     organization: "Basik Marketing Pvt Ltd",
     location: "Chennai, India",
-    period: "05/2022 - 07/2022",
+    period: "May 2022 - Jul 2022",
     bullets: [
-      "Developed a real-time esports broadcast overlay using Python and Node.js.",
-      "Built backend logic that updated match and event counters dynamically during live streams."
+      "Developed a real-time esports broadcast overlay with Python and Node.js, including backend logic for live match and event counters."
     ]
   }
 ];

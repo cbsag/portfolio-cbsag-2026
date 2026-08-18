@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 
 export const metadata: Metadata = {
-  title: "Ganesh Chandrasekar | Portfolio",
-  description: "Portfolio for machine learning, NLP, AI systems, and software engineering work."
+  title: "Ganesh Chandrasekar | AI/ML Engineer",
+  description: "AI/ML engineering portfolio focused on NLP, LLMs, RAG, information retrieval, and biomedical question answering."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

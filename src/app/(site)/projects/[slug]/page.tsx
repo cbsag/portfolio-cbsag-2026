@@ -29,7 +29,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <div className="mt-5 flex flex-wrap gap-3 text-sm">
         {links.demo ? (
           <a className="underline underline-offset-4" href={links.demo}>
-            Live viewer
+            Live demo
           </a>
         ) : null}
         {links.code ? (
