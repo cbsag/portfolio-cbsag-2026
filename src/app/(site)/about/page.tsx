@@ -160,7 +160,7 @@ export default function AboutPage() {
                         className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"
                         href={site.links.trecDemo}
                       >
-                        TREC Viewer
+                        TREC Examples
                       </a>
                     </div>
                   </Panel>

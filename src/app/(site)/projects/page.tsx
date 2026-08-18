@@ -112,7 +112,7 @@ export default function ProjectsPage() {
                         className="text-sm text-[rgb(var(--muted))] underline underline-offset-4 transition hover:text-[rgb(var(--fg))]"
                         href={featuredDemo}
                       >
-                        Live viewer
+                        Live demo
                       </a>
                     ) : null}
                     {featuredPaper ? (

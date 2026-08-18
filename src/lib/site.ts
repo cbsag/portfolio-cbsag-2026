@@ -13,7 +13,7 @@ export const site = {
     github: "https://github.com/cbsag",
     linkedin: "https://www.linkedin.com/in/cbsag/",
     bioEvidence: "https://bioevidence.cbsag.me/",
-    trecDemo: "https://trec-biogen-taskb-viewer.vercel.app/",
+    trecDemo: "https://bioevidence.cbsag.me/ask?mode=examples",
     resume: "/cv",
     resumeFile: "/cv.pdf"
   }
