@@ -1,9 +1,9 @@
 ---
 title: "Agentic and non-agentic multi-hop medical question answering"
 date: "2025-08-14"
-summary: "Built three multi-hop QA systems combining open-source LLMs with Wikipedia and PubMed retrieval, then compared agentic and controlled non-agentic workflows."
-tags: ["Multi-hop", "LLMs", "Retrieval", "Medical QA", "BioCreative"]
-highlight: "The Wikipedia + PubMed pipeline reached 0.67 development-set accuracy, the best result among the evaluated configurations."
+summary: "Compared an agentic Qwen2.5 workflow with controlled Wikipedia and Wikipedia + PubMed pipelines to study how tool use and retrieval strategy affect answer quality."
+tags: ["Multi-hop", "Qwen2.5", "smolagents", "Retrieval", "Medical QA", "BioCreative"]
+highlight: "The agentic system iteratively searched Wikipedia and decided whether to gather more evidence or answer, with a 15-step cap."
 links:
   code: "https://github.com/cbsag/medhopqa-agentic-and-non-agentic-systems"
   paper: "https://zenodo.org/records/16875905"
@@ -14,12 +14,11 @@ links:
 How do agentic and non-agentic multi-hop pipelines differ in medical QA accuracy, evidence use, and reliability?
 
 ## System design
-- Developed three multi-hop systems combining open-source LLMs with Wikipedia and PubMed retrieval
-- Implemented an agentic workflow with smolagents and Qwen2.5-Coder-32B
-- Built controlled non-agentic pipelines for evidence retrieval, reranking, and answer extraction
-- Compared short-answer accuracy, evidence use, and reliability under the same evaluation setup
+- Built an agentic Qwen2.5 workflow that iteratively searched Wikipedia
+- Let the model decide whether to continue gathering evidence or answer, with a 15-step cap
+- Built controlled Wikipedia and Wikipedia + PubMed comparison pipelines
+- Examined how tool use and retrieval strategy affected answer quality
 
 ## Results
 - Published the results at BioCreative IX / IJCAI 2025
-- Reached 0.67 development-set accuracy with the Wikipedia + PubMed pipeline
-- Produced a side-by-side analysis framework for agentic vs non-agentic system behavior
+- Produced a side-by-side analysis of agentic and non-agentic multi-hop system behavior

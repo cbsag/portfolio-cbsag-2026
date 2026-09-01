@@ -11,8 +11,8 @@ export default function FocusStrip() {
               Evidence-grounded AI, from research to deployment
             </h3>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              I defended my MCompSc thesis on evidence-grounded biomedical question answering in August 2026. I am now
-              focused on ML, NLP, retrieval, AI evaluation, and software systems that need strong engineering.
+              I completed my MCompSc thesis on evidence-grounded biomedical question answering in August 2026. I am
+              now focused on retrieval, RAG, LLM evaluation, and production AI systems that need strong engineering.
             </p>
 
             <div className="mt-6 space-y-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
@@ -28,16 +28,16 @@ export default function FocusStrip() {
             </div>
             <div className="mt-4 space-y-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
               <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Applied AI research:</span> model fine-tuning,
-                sequence labeling, information extraction, retrieval, and QA system design.
+                <span className="font-medium text-[rgb(var(--fg))]">Applied AI research:</span> retrieval, RAG,
+                embeddings, sequence labeling, and agentic workflows with LangGraph, MCP, and smolagents.
               </div>
               <div>
                 <span className="font-medium text-[rgb(var(--fg))]">Evaluation and analysis:</span> shared-task
                 baselines, error analysis, LLM and human feedback loops, and inspection dashboards.
               </div>
               <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Software delivery:</span> Python, React, Node.js,
-                APIs, cloud workflows, and practical tools that make models usable.
+                <span className="font-medium text-[rgb(var(--fg))]">Software delivery:</span> Python, TypeScript,
+                REST APIs, GCP, Docker, and practical interfaces that make models usable.
               </div>
             </div>
           </div>

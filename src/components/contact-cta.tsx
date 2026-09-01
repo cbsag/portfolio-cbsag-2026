@@ -9,7 +9,7 @@ export default function ContactCTA() {
           <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Contact</div>
           <div className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Let&apos;s talk</div>
           <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-            If you&apos;re hiring for research-minded ML, NLP, evaluation, or software engineering work, I&apos;d be
+            If you&apos;re hiring for AI/ML, NLP, RAG, information retrieval, or software engineering work, I&apos;d be
             happy to connect.
           </p>
 

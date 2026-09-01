@@ -28,15 +28,15 @@ export default function AboutPage() {
               </h2>
 
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-zinc-700 dark:text-zinc-200 sm:text-base">
-                I&apos;m {site.name}, an AI/ML engineer and Research Assistant at Concordia University. I completed my
-                Master of Computer Science thesis, <em>Evidence-Grounded Biomedical Question Answering: Design,
-                Analysis, and Evaluation</em>, in August 2026. That work sharpened how I think about retrieval,
-                evaluation, grounding, and citation reliability.
+                I&apos;m {site.name}, an AI/ML engineer with a Master of Computer Science from Concordia University. My
+                thesis, <em>Evidence-Grounded Biomedical Question Answering: Design, Analysis, and Evaluation</em>,
+                brought together large-scale retrieval, reranking, LLM inference, and evaluation. I defended it in
+                August 2026.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-base">
-                I do my best work where research depth and engineering constraints both matter. The projects that fit
-                me best usually involve modeling, measurement, interfaces, and the work needed to make a system
-                understandable to other people.
+                I do my best work where research depth and engineering constraints both matter. Alongside AI research,
+                I have built GCP-backed APIs and product workflows, so I am comfortable carrying systems from modeling
+                and measurement through backend services and user-facing interfaces.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">

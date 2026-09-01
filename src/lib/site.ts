@@ -1,14 +1,14 @@
 export const site = {
   name: "Ganesh Chandrasekar",
   tagline: "AI/ML • NLP • LLMs • RAG • Information Retrieval",
-  role: "AI/ML Engineer and Research Assistant",
-  headline: "Building evidence-grounded AI systems.",
+  role: "AI/ML Engineer · MCompSc",
+  headline: "Building retrieval, RAG, and LLM systems.",
   subheadline:
-    "I build large-scale retrieval and evaluation pipelines, GPU inference workflows, backend APIs, and user-facing AI applications across NLP, RAG, and biomedical question answering.",
+    "My work spans retrieval, reranking, model inference, and evaluation, grounded in software engineering experience building GCP APIs and product workflows.",
   availability: "Open to full-time AI/ML, NLP, and information retrieval roles.",
-  focusAreas: ["Evidence-grounded RAG", "Information retrieval", "Biomedical NLP"],
+  focusAreas: ["Retrieval and RAG", "LLM evaluation", "Applied AI engineering"],
   location: "Montreal, QC, Canada",
-  email: "cb.ganesh666@gmail.com",
+  email: "ganesh.cbsag@gmail.com",
   links: {
     github: "https://github.com/cbsag",
     linkedin: "https://www.linkedin.com/in/cbsag/",
