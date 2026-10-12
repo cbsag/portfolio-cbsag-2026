@@ -19,29 +19,27 @@ export default function SceneHero() {
       <div className="pointer-events-none absolute inset-0 glow" />
 
       <div className="container relative z-10 w-full py-14">
-        <div className="mx-auto max-w-5xl">
-          <h1 className="text-[clamp(2rem,8.2vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.045em]">
+        <div className="mx-auto max-w-6xl">
+          <h1 className="grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] items-start gap-x-[clamp(0.65rem,2vw,1.75rem)]">
             <span className="sr-only">{site.name}</span>
-            <span aria-hidden="true">
-              <span className="flex items-center gap-[0.08em]">
-                <motion.span
-                  style={{ y: logoY, scale: logoScale, opacity: logoOpacity }}
-                  className="site-signature relative aspect-[618/569] w-[1.12em] shrink-0 origin-center text-[rgb(var(--fg))]"
-                />
-                <motion.span
-                  style={{ y: copyY, opacity: nameOpacity }}
-                  className="whitespace-nowrap"
-                >
-                  anesh
-                </motion.span>
+            <motion.span
+              style={{ y: logoY, scale: logoScale, opacity: logoOpacity }}
+              className="site-signature relative aspect-[618/569] w-full origin-center text-[rgb(var(--fg))]"
+              aria-hidden="true"
+            />
+            <motion.span
+              style={{ y: copyY, opacity: nameOpacity }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+              className="min-w-0 text-[clamp(2rem,8.2vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.045em]"
+              aria-hidden="true"
+            >
+              <span className="flex h-[clamp(3.68rem,12.89vw,11.51rem)] items-end whitespace-nowrap">
+                anesh
               </span>
-              <motion.span
-                style={{ y: copyY, opacity: nameOpacity }}
-                className="block whitespace-nowrap"
-              >
-                Chandrasekar
-              </motion.span>
-            </span>
+              <span className="block whitespace-nowrap">Chandrasekar</span>
+            </motion.span>
           </h1>
 
           <motion.div
@@ -49,9 +47,9 @@ export default function SceneHero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 max-w-2xl"
+            className="mt-7 grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] gap-x-[clamp(0.65rem,2vw,1.75rem)]"
           >
-            <div>
+            <div className="col-span-2 sm:col-span-1 sm:col-start-2">
               <div className="eyebrow">{site.role}</div>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-[rgb(var(--muted))] sm:text-lg">
                 {site.introduction}
