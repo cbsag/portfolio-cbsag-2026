@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
+import ThemeFavicon from "@/components/theme-favicon";
 
 export const metadata: Metadata = {
   title: "Ganesh Chandrasekar | AI/ML Engineer",
@@ -14,7 +15,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <ThemeFavicon />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

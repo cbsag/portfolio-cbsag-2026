@@ -11,19 +11,19 @@ links:
 ---
 
 ## Overview
-BioEvidence turns the biomedical QA research pipeline into a working application where retrieval, reranking, generation, and citation validation can be inspected independently. Its Examples mode also provides a detailed view of TREC questions, evidence, answers, and citations.
+BioEvidence turns a biomedical question into an evidence-grounded answer while keeping retrieval, reranking, generation, and citation validation independently inspectable. Its Examples area makes complete question-to-answer workflows easy to explore without reducing the product to a single benchmark.
 
 ## System design
 - Pyserini/Lucene retrieval with reranking and evidence selection
 - Local LLM generation followed by citation validation
 - Python backend integrating PubMed/NCBI, Europe PMC, and ClinicalTrials.gov APIs
 - Supabase authentication and application data
-- Next.js interface for live questions and detailed TREC BioGen examples
+- Next.js interface for live questions, saved examples, and evidence inspection
 
 ## What was built
 - Inspectable, stage-separated query-to-citation pipeline
-- User-facing Next.js application for live answers and saved TREC example inspection
+- User-facing Next.js application for live answers and saved example inspection
 - Authentication and application data through Supabase
 
 ## Result
-The TREC research pipeline and its evaluation artifacts now connect to a practical application with inspectable evidence, API-backed biomedical sources, and a complete user-facing workflow.
+The result is a practical biomedical QA product with inspectable evidence, API-backed sources, and a complete user-facing workflow from question to citation.

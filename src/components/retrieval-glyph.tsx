@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 
 const nodes = [
-  { id: "q", x: 62, y: 112, r: 5, label: "TREC question" },
-  { id: "r1", x: 138, y: 72, r: 4, label: "PubMed" },
-  { id: "r2", x: 138, y: 152, r: 4, label: "MedCPT" },
-  { id: "hub", x: 224, y: 112, r: 7, label: "reranked evidence" },
-  { id: "evi", x: 308, y: 74, r: 4, label: "Qwen answer" },
-  { id: "out", x: 370, y: 112, r: 6, label: "citation check" }
+  { id: "q", x: 82, y: 112, r: 5, label: "query" },
+  { id: "r1", x: 146, y: 72, r: 4, label: "retrieval" },
+  { id: "r2", x: 146, y: 152, r: 4, label: "rank" },
+  { id: "hub", x: 224, y: 112, r: 7, label: "context" },
+  { id: "evi", x: 304, y: 74, r: 4, label: "evidence" },
+  { id: "out", x: 344, y: 112, r: 6, label: "answer" }
 ];
 
 export default function RetrievalGlyph({ compact = false }: { compact?: boolean }) {
@@ -46,21 +46,6 @@ export default function RetrievalGlyph({ compact = false }: { compact?: boolean 
           strokeOpacity="0.18"
           strokeWidth="1"
         />
-
-        <path
-          d="M62 112 L138 72 L224 112 L308 74 L370 112"
-          fill="none"
-          stroke="currentColor"
-          strokeOpacity="0.22"
-          strokeWidth="1.25"
-        />
-        <path
-          d="M62 112 L138 152 L224 112"
-          fill="none"
-          stroke="currentColor"
-          strokeOpacity="0.16"
-          strokeWidth="1.25"
-        />
         <circle
           cx="210"
           cy="112"
@@ -78,7 +63,7 @@ export default function RetrievalGlyph({ compact = false }: { compact?: boolean 
           fillOpacity="0.92"
           filter="url(#glyph-glow)"
           animate={{
-            cx: [62, 138, 224, 308, 370],
+            cx: [82, 146, 224, 304, 344],
             cy: [112, 72, 112, 74, 112]
           }}
           transition={{ duration: 2.9, ease: "linear", repeat: Infinity }}
@@ -90,7 +75,7 @@ export default function RetrievalGlyph({ compact = false }: { compact?: boolean 
           fillOpacity="0.78"
           filter="url(#glyph-glow)"
           animate={{
-            cx: [62, 138, 224, 308, 370],
+            cx: [82, 146, 224, 304, 344],
             cy: [112, 152, 112, 74, 112]
           }}
           transition={{ duration: 3.5, ease: "linear", repeat: Infinity, delay: 0.55 }}
@@ -109,7 +94,7 @@ export default function RetrievalGlyph({ compact = false }: { compact?: boolean 
         />
 
         <motion.circle
-          cx="370"
+          cx="344"
           cy="112"
           r="14"
           fill="none"
@@ -139,15 +124,17 @@ export default function RetrievalGlyph({ compact = false }: { compact?: boolean 
               strokeWidth="1"
               filter={node.id === "out" ? "url(#glyph-glow)" : undefined}
             />
-            <text
-              x={node.x}
-              y={node.y + 18}
-              textAnchor="middle"
-              fontSize={compact ? "8" : "10"}
-              style={{ fill: "rgb(var(--muted))", opacity: 0.92, fontFamily: "var(--font-mono)" }}
-            >
-              {node.label}
-            </text>
+            {!compact ? (
+              <text
+                x={node.x}
+                y={node.y + 18}
+                textAnchor="middle"
+                fontSize="10"
+                style={{ fill: "rgb(var(--muted))", opacity: 0.92, fontFamily: "var(--font-mono)" }}
+              >
+                {node.label}
+              </text>
+            ) : null}
           </g>
         ))}
       </svg>

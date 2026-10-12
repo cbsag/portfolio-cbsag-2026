@@ -2,7 +2,6 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { getAllDocs } from "@/lib/mdx";
 import AccentButton from "@/components/accent-button";
-import RetrievalGlyph from "@/components/retrieval-glyph";
 
 export default function WorkRail() {
   const projects = getAllDocs("projects");
@@ -28,11 +27,11 @@ export default function WorkRail() {
           <div>
             <div className="eyebrow">Featured work</div>
             <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-              Biomedical QA, made inspectable.
+              Systems built to be inspected.
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
-              BioEvidence carries the TREC retrieval and evaluation work into a live product where the evidence path can
-              be examined stage by stage.
+              Selected work across biomedical question answering, retrieval, evaluation, and software delivery—each
+              showing how the system behaves, not only what it outputs.
             </p>
           </div>
 
@@ -71,7 +70,7 @@ export default function WorkRail() {
                       className="text-sm font-semibold underline underline-offset-4"
                       href={featuredDemo}
                     >
-                      Open TREC examples <ArrowUpRight className="ml-1 inline h-4 w-4" />
+                      Open live demo <ArrowUpRight className="ml-1 inline h-4 w-4" />
                     </a>
                   ) : null}
                   {featuredCode ? (
@@ -87,12 +86,22 @@ export default function WorkRail() {
 
               <div className="border-t border-[rgba(var(--line),0.14)] pt-5 xl:border-l xl:border-t-0 xl:pl-7 xl:pt-0">
                 <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--muted))] text-mono">
-                  A real BioEvidence trace
+                  What the product brings together
                 </div>
-                <RetrievalGlyph compact />
-                <p className="text-xs leading-relaxed text-[rgb(var(--muted))]">
-                  TREC questions move through PubMed retrieval, MedCPT reranking, Qwen generation, and citation
-                  validation. Each stage remains visible in the live Examples view.
+                <div className="mt-6 divide-y divide-[rgba(var(--line),0.14)] border-y border-[rgba(var(--line),0.14)]">
+                  {[
+                    ["Retrieval", "Biomedical sources, ranking, and evidence selection"],
+                    ["Answering", "Generation with inspectable citations and validation"],
+                    ["Product", "Python APIs, Next.js, Supabase, and saved workflows"]
+                  ].map(([label, text]) => (
+                    <div key={label} className="grid gap-2 py-4 sm:grid-cols-[0.32fr_1fr]">
+                      <div className="text-sm font-semibold">{label}</div>
+                      <div className="text-sm leading-relaxed text-[rgb(var(--muted))]">{text}</div>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-5 text-xs leading-relaxed text-[rgb(var(--muted))]">
+                  Detailed research runs remain available through the Examples view without defining the product itself.
                 </p>
               </div>
             </article>

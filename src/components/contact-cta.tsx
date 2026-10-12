@@ -3,11 +3,13 @@ import { site } from "@/lib/site";
 
 export default function ContactCTA() {
   return (
-    <section className="relative">
+    <section className="relative flex min-h-[calc(100svh-4rem)] items-center">
       <div className="container py-20">
         <div className="interface-panel panel-tint panel-tint-publication p-8 sm:p-10">
           <div className="eyebrow">Contact</div>
-          <div className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Building an AI product or team?</div>
+          <div className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+            Let&apos;s turn a hard problem into a working system.
+          </div>
           <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
             I&apos;m open to AI/ML and software engineering roles where thoughtful evaluation and reliable delivery both matter.
           </p>

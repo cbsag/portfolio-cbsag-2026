@@ -5,6 +5,7 @@ import { Panel } from "@/components/ui/panel";
 import { renderDocContent } from "@/lib/render-doc-content";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import RetrievalGlyph from "@/components/retrieval-glyph";
 
 export function generateStaticParams() {
   return getAllSlugs("projects").map((slug) => ({ slug }));
@@ -36,15 +37,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="mt-7 flex flex-wrap gap-2 text-sm">
-          {links.demo ? <a className="inline-flex items-center rounded-xl bg-[rgb(var(--fg))] px-4 py-2 font-semibold text-[rgb(var(--bg))]" href={links.demo}>{isBioEvidence || isTrec ? "Open TREC examples" : "Live demo"} <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
+          {links.demo ? <a className="inline-flex items-center rounded-xl bg-[rgb(var(--fg))] px-4 py-2 font-semibold text-[rgb(var(--bg))]" href={links.demo}>{isTrec ? "Open TREC examples" : "Live demo"} <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
           {links.code ? <a className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-4 py-2 font-semibold" href={links.code}>Code <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
           {links.paper ? <a className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-4 py-2 font-semibold" href={links.paper}>Paper <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
         </div>
 
         {isBioEvidence ? (
           <div className="mt-7 border-t border-[rgba(var(--line),0.14)] pt-5 text-sm leading-relaxed text-[rgb(var(--muted))]">
-            BioEvidence contains the detailed live view of the TREC BioGen questions, retrieved evidence, generated
-            answers, and citations. <Link className="font-semibold text-[rgb(var(--fg))] underline underline-offset-4" href="/projects/trec-biogen">Read the TREC system case study →</Link>
+            The BioEvidence Examples area also includes detailed TREC BioGen questions, retrieved evidence, generated
+            answers, and citations. <Link className="font-semibold text-[rgb(var(--fg))] underline underline-offset-4" href="/projects/trec-biogen">Read the connected TREC system case study →</Link>
           </div>
         ) : null}
 
@@ -54,6 +55,30 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           </div>
         ) : null}
       </div>
+
+      {isBioEvidence ? (
+        <section className="relative mt-8 flex min-h-[calc(100svh-4rem)] items-center overflow-hidden border-y border-[rgba(var(--line),0.14)]">
+          <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+          <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.06] dark:opacity-[0.10]" />
+          <div className="pointer-events-none absolute inset-0 glow opacity-80" />
+          <div className="relative z-10 mx-auto w-full max-w-[820px] px-4 py-12 text-center sm:py-16">
+            <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
+              The interaction model
+            </div>
+            <div className="mt-5 w-full">
+              <RetrievalGlyph />
+            </div>
+            <h2 className="mt-2 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+              Follow the path from query to answer.
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
+              The interface keeps retrieval, ranking, context, evidence, and the final answer visible as distinct parts
+              of one workflow. The glyph stays intentionally general because that interaction pattern extends beyond a
+              single benchmark or dataset.
+            </p>
+          </div>
+        </section>
+      ) : null}
 
       <Separator />
 

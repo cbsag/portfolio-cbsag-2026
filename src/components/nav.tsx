@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useMemo, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 
@@ -23,6 +24,9 @@ export default function Nav() {
   const pathname = usePathname();
   const { resolvedTheme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const homeLogoOpacity = useTransform(scrollY, [0, 220], [0, 1]);
+  const homeLogoScale = useTransform(scrollY, [0, 220], [0.72, 1]);
 
   const activeLink = useMemo(
     () =>
@@ -44,7 +48,11 @@ export default function Nav() {
           className="group inline-flex shrink-0 items-center text-[rgb(var(--fg))]"
           aria-label="Ganesh Chandrasekar, home"
         >
-          <span className="site-signature h-9 w-10 transition-transform duration-300 group-hover:-rotate-2" aria-hidden="true" />
+          <motion.span
+            style={pathname === "/" ? { opacity: homeLogoOpacity, scale: homeLogoScale } : undefined}
+            className="site-signature h-9 w-10 transition-transform duration-300 group-hover:-rotate-2"
+            aria-hidden="true"
+          />
         </Link>
 
         <div className="ml-auto flex min-w-0 items-center md:hidden">
