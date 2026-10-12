@@ -14,7 +14,7 @@ export default function ExperiencePage() {
       <div className="mt-10 border-t border-[rgba(var(--line),0.16)]">
         {experiences.map((item, index) => (
           <Reveal key={item.id} delay={0.025 * index}>
-            <article className="grid gap-5 border-b border-[rgba(var(--line),0.14)] py-9 lg:min-h-[calc(100svh-4rem)] lg:grid-cols-[0.2fr_0.34fr_1fr] lg:items-center lg:gap-10">
+            <article className="grid gap-5 border-b border-[rgba(var(--line),0.14)] py-9 lg:grid-cols-[0.2fr_0.34fr_1fr] lg:gap-10">
               <div className="text-xs uppercase tracking-[0.14em] text-[rgb(var(--muted))] text-mono">
                 {String(index + 1).padStart(2, "0")}
                 <div className="mt-2 normal-case leading-relaxed tracking-normal">{item.period}</div>

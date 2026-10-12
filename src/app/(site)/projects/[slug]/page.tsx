@@ -57,7 +57,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       </div>
 
       {isBioEvidence ? (
-        <section className="relative mt-8 flex min-h-[calc(100svh-4rem)] items-center overflow-hidden border-y border-[rgba(var(--line),0.14)]">
+        <section className="relative mt-8 overflow-hidden border-y border-[rgba(var(--line),0.14)]">
           <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
           <div className="pointer-events-none absolute inset-0 bg-noise opacity-[0.06] dark:opacity-[0.10]" />
           <div className="pointer-events-none absolute inset-0 glow opacity-80" />

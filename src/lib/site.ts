@@ -1,11 +1,13 @@
 export const site = {
   name: "Ganesh Chandrasekar",
   tagline: "Machine Learning · NLP · Generative AI · Software Engineering",
-  role: "AI/ML Engineer · MCompSc",
-  headline: "AI systems, engineered from model to product.",
-  subheadline:
-    "I build machine learning, NLP, retrieval, and generative AI systems—from training and evaluation to APIs and user-facing applications.",
-  availability: "Open to full-time AI/ML and software engineering roles.",
+  role: "AI/ML Engineer · Researcher",
+  introduction:
+    "I build AI applications and evaluate how well they work—from research experiments to reliable software.",
+  currentFocus: {
+    active: true,
+    label: "Open to full-time AI/ML engineering opportunities."
+  },
   focusAreas: ["Machine learning", "NLP and retrieval", "Generative AI", "Software engineering"],
   location: "Montreal, QC, Canada",
   email: "ganesh.cbsag@gmail.com",

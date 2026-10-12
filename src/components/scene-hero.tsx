@@ -17,14 +17,14 @@ export default function SceneHero() {
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-28" />
       <div className="pointer-events-none absolute inset-0 glow" />
 
-      <div className="container relative z-10 grid w-full items-center gap-10 py-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div className="container relative z-10 grid w-full items-center gap-9 py-14 lg:grid-cols-[0.86fr_1.14fr] lg:gap-16">
         <motion.div
           style={{ y: logoY, scale: logoScale, opacity: logoOpacity }}
           className="relative flex items-center justify-center text-[rgb(var(--fg))]"
         >
           <div className="absolute h-[20rem] w-[20rem] rounded-full bg-[rgba(var(--accent-b),0.07)] blur-3xl sm:h-[28rem] sm:w-[28rem]" />
           <div
-            className="site-signature relative aspect-[618/569] w-[clamp(10rem,30vw,22rem)]"
+            className="site-signature relative aspect-[618/569] w-[clamp(9rem,28vw,21rem)]"
             aria-hidden="true"
           />
         </motion.div>
@@ -36,21 +36,26 @@ export default function SceneHero() {
           transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-3xl"
         >
-          <div className="eyebrow">Researcher · engineer · builder</div>
-          <h1 className="mt-6 text-[clamp(3.15rem,6.5vw,6.4rem)] font-semibold leading-[0.96] tracking-[-0.055em]">
-            <span className="block">Hard questions.</span>
-            <span className="gradient-text block">Working systems.</span>
+          <div className="eyebrow">{site.role}</div>
+          <h1 className="mt-5 max-w-[11ch] text-[clamp(3rem,5.6vw,5.5rem)] font-semibold leading-[1.02] tracking-[-0.045em]">
+            {site.name}
           </h1>
 
-          <p className="mt-7 max-w-2xl text-base leading-relaxed text-[rgb(var(--muted))] sm:text-lg">
-            I follow ideas from research and evaluation through APIs and interfaces—building machine-learning products
-            that can be tested, inspected, and used.
+          <p className="mt-6 max-w-2xl text-base leading-relaxed text-[rgb(var(--muted))] sm:text-lg">
+            {site.introduction}
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          {site.currentFocus.active ? (
+            <div className="mt-5 inline-flex items-center gap-2.5 text-sm font-medium text-[rgb(var(--fg))]">
+              <span className="h-2 w-2 rounded-full bg-emerald-500" aria-hidden="true" />
+              {site.currentFocus.label}
+            </div>
+          ) : null}
+
+          <div className="mt-7 flex flex-wrap items-center gap-3">
             <a href="#featured-work">
               <AccentButton>
-                View featured work
+                View projects
                 <ArrowDown className="ml-2 h-4 w-4" />
               </AccentButton>
             </a>
@@ -63,12 +68,8 @@ export default function SceneHero() {
             </a>
           </div>
 
-          <div className="mt-9 flex flex-wrap items-center gap-x-5 gap-y-3 text-xs text-[rgb(var(--muted))] text-mono">
-            <span className="inline-flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500" />
-              {site.availability}
-            </span>
-            <span>{site.location}</span>
+          <div className="mt-7 text-xs text-[rgb(var(--muted))] text-mono">
+            {site.location}
           </div>
         </motion.div>
       </div>

@@ -9,15 +9,15 @@ export default function ThemeFavicon() {
   useEffect(() => {
     if (!resolvedTheme) return;
 
-    let icon = document.querySelector<HTMLLinkElement>('link[rel~="icon"]');
-    if (!icon) {
-      icon = document.createElement("link");
-      icon.rel = "icon";
-      document.head.appendChild(icon);
-    }
+    document.querySelectorAll<HTMLLinkElement>('link[rel~="icon"]').forEach((icon) => icon.remove());
 
+    const icon = document.createElement("link");
+    icon.rel = "icon";
     icon.type = "image/png";
-    icon.href = resolvedTheme === "dark" ? "/logo-light.png" : "/logo-dark.png";
+    icon.sizes = "any";
+    icon.dataset.dynamicFavicon = resolvedTheme;
+    icon.href = `${resolvedTheme === "dark" ? "/logo-light.png" : "/logo-dark.png"}?theme=${resolvedTheme}`;
+    document.head.appendChild(icon);
   }, [resolvedTheme]);
 
   return null;

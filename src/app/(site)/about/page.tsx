@@ -187,7 +187,7 @@ export default function AboutPage() {
               name={site.name}
               role={site.role}
               location={site.location}
-              availability={site.availability}
+              availability={site.currentFocus.label}
             />
           </Reveal>
         </div>

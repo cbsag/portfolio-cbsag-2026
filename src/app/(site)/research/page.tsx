@@ -27,9 +27,8 @@ const themes = [
 
 export default function ResearchPage() {
   return (
-    <div className="container">
-      <section className="flex min-h-[calc(100svh-4rem)] flex-col justify-center py-10">
-        <PageIntro
+    <div className="container pt-10">
+      <PageIntro
         eyebrow="Research profile"
         title="Research"
         desc="My graduate work focused on evidence-grounded biomedical question answering: designing systems that retrieve well, answer carefully, cite correctly, and reveal where they fail."
@@ -41,9 +40,9 @@ export default function ResearchPage() {
             <Link href="/projects/trec-biogen" className="underline underline-offset-4">TREC case study</Link>
           </>
         }
-        />
+      />
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
+      <div className="mt-10 grid gap-6 lg:grid-cols-[1.12fr_0.88fr]">
         <Reveal>
           <Panel className="panel-tint panel-tint-project p-7 sm:p-8">
             <div className="eyebrow">Master&apos;s thesis</div>
@@ -84,33 +83,28 @@ export default function ResearchPage() {
             </div>
           </Panel>
         </Reveal>
+      </div>
+
+      <section className="mt-16">
+        <div className="eyebrow">Method</div>
+        <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em]">A complete evidence path</h2>
+        <div className="mt-8">
+          <PipelineStrip />
         </div>
       </section>
 
-      <section className="flex min-h-[calc(100svh-4rem)] items-center border-t border-[rgba(var(--line),0.12)]">
-        <div className="w-full">
-          <div className="eyebrow">Method</div>
-          <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em]">A complete evidence path</h2>
-          <div className="mt-8">
-            <PipelineStrip />
-          </div>
-        </div>
-      </section>
-
-      <section className="flex min-h-[calc(100svh-4rem)] items-center border-t border-[rgba(var(--line),0.12)]">
-        <div className="w-full">
-          <div className="eyebrow">Research themes</div>
-          <div className="mt-7 grid gap-4 md:grid-cols-2">
-            {themes.map((theme, index) => (
-              <Reveal key={theme.title} delay={0.03 * index}>
-                <Panel className="h-full p-6">
-                  <div className="text-xs font-bold text-[rgb(var(--accent-b))] text-mono">0{index + 1}</div>
-                  <h3 className="mt-3 text-lg font-semibold tracking-tight">{theme.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">{theme.text}</p>
-                </Panel>
-              </Reveal>
-            ))}
-          </div>
+      <section className="mt-16 border-t border-[rgba(var(--line),0.10)] pt-10">
+        <div className="eyebrow">Research themes</div>
+        <div className="mt-7 grid gap-4 md:grid-cols-2">
+          {themes.map((theme, index) => (
+            <Reveal key={theme.title} delay={0.03 * index}>
+              <Panel className="h-full p-6">
+                <div className="text-xs font-bold text-[rgb(var(--accent-b))] text-mono">0{index + 1}</div>
+                <h3 className="mt-3 text-lg font-semibold tracking-tight">{theme.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">{theme.text}</p>
+              </Panel>
+            </Reveal>
+          ))}
         </div>
       </section>
     </div>

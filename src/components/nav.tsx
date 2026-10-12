@@ -48,11 +48,18 @@ export default function Nav() {
           className="group inline-flex shrink-0 items-center text-[rgb(var(--fg))]"
           aria-label="Ganesh Chandrasekar, home"
         >
-          <motion.span
-            style={pathname === "/" ? { opacity: homeLogoOpacity, scale: homeLogoScale } : undefined}
-            className="site-signature h-9 w-10 transition-transform duration-300 group-hover:-rotate-2"
-            aria-hidden="true"
-          />
+          {pathname === "/" ? (
+            <motion.span
+              style={{ opacity: homeLogoOpacity, scale: homeLogoScale }}
+              className="site-signature h-9 w-10 transition-transform duration-300 group-hover:-rotate-2"
+              aria-hidden="true"
+            />
+          ) : (
+            <span
+              className="site-signature h-9 w-10 opacity-100 transition-transform duration-300 group-hover:-rotate-2"
+              aria-hidden="true"
+            />
+          )}
         </Link>
 
         <div className="ml-auto flex min-w-0 items-center md:hidden">

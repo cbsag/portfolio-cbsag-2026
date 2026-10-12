@@ -5,7 +5,7 @@ export default function ExperienceRail() {
   const preview = experiences.slice(0, 3);
 
   return (
-    <section className="relative flex min-h-[calc(100svh-4rem)] items-center border-b border-[rgba(var(--line),0.12)]">
+    <section className="relative border-b border-[rgba(var(--line),0.12)]">
       <div className="container py-20 sm:py-24">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
