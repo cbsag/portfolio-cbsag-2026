@@ -18,6 +18,8 @@ export default function Footer() {
           <Link href="/talks" className="transition hover:text-[rgb(var(--fg))]">Talks</Link>
           <a href={site.links.github} className="transition hover:text-[rgb(var(--fg))]">GitHub</a>
           <a href={site.links.linkedin} className="transition hover:text-[rgb(var(--fg))]">LinkedIn</a>
+          <a href={site.links.scholar} className="transition hover:text-[rgb(var(--fg))]">Google Scholar</a>
+          <a href={site.links.thesis} className="transition hover:text-[rgb(var(--fg))]">Thesis</a>
         </div>
       </div>
     </footer>

@@ -4,6 +4,7 @@ import Reveal from "@/components/reveal";
 import { Panel } from "@/components/ui/panel";
 import { Badge } from "@/components/ui/badge";
 import PipelineStrip from "@/components/pipeline";
+import { site } from "@/lib/site";
 
 const themes = [
   {
@@ -33,6 +34,8 @@ export default function ResearchPage() {
         desc="My graduate work focused on evidence-grounded biomedical question answering: designing systems that retrieve well, answer carefully, cite correctly, and reveal where they fail."
         actions={
           <>
+            <a href={site.links.thesis} className="underline underline-offset-4">Published thesis</a>
+            <a href={site.links.scholar} className="underline underline-offset-4">Google Scholar</a>
             <Link href="/publications" className="underline underline-offset-4">Publications</Link>
             <Link href="/projects/trec-biogen" className="underline underline-offset-4">TREC case study</Link>
           </>
@@ -47,14 +50,18 @@ export default function ResearchPage() {
               Evidence-Grounded Biomedical Question Answering: Design, Analysis, and Evaluation
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
-              Completed at Concordia University and defended in August 2026. The work joins biomedical retrieval,
-              reranking, language-model generation, citation validation, and diagnostic evaluation into one system view.
+              Published through Concordia University&apos;s Spectrum research repository. The work joins biomedical
+              retrieval, reranking, language-model generation, citation validation, and diagnostic evaluation into one
+              system view.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Biomedical QA", "Information retrieval", "RAG", "Evaluation", "Citation validation"].map((item) => (
                 <Badge key={item}>{item}</Badge>
               ))}
             </div>
+            <a className="mt-6 inline-flex text-sm font-semibold underline underline-offset-4" href={site.links.thesis}>
+              Read the published thesis →
+            </a>
           </Panel>
         </Reveal>
 

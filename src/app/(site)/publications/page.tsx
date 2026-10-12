@@ -3,6 +3,7 @@ import PageIntro from "@/components/page-intro";
 import { Panel } from "@/components/ui/panel";
 import { Badge } from "@/components/ui/badge";
 import Reveal from "@/components/reveal";
+import { site } from "@/lib/site";
 
 const actionLinkClass =
   "inline-flex h-9 items-center justify-center rounded-xl border border-[rgba(var(--line),0.18)] px-4 text-[13px] font-medium tracking-tight text-[rgb(var(--fg))] transition hover:bg-[rgba(var(--panel-a),0.06)]";
@@ -16,6 +17,11 @@ export default function PublicationsPage() {
         eyebrow="Published work"
         title="Publications"
         desc="Peer-reviewed papers and shared-task system descriptions spanning biomedical question answering and computer architecture."
+        actions={
+          <a href={site.links.scholar} className="underline underline-offset-4">
+            Google Scholar ↗
+          </a>
+        }
       />
 
       <div className="mt-10 grid gap-4">

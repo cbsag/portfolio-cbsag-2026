@@ -14,6 +14,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const doc = getDocBySlug("projects", slug);
   const links = doc.frontmatter.links ?? {};
+  const isBioEvidence = slug === "bioevidence-ai";
+  const isTrec = slug === "trec-biogen";
 
   return (
     <div className="container pt-10">
@@ -34,10 +36,23 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="mt-7 flex flex-wrap gap-2 text-sm">
-          {links.demo ? <a className="inline-flex items-center rounded-xl bg-[rgb(var(--fg))] px-4 py-2 font-semibold text-[rgb(var(--bg))]" href={links.demo}>Live demo <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
+          {links.demo ? <a className="inline-flex items-center rounded-xl bg-[rgb(var(--fg))] px-4 py-2 font-semibold text-[rgb(var(--bg))]" href={links.demo}>{isBioEvidence || isTrec ? "Open TREC examples" : "Live demo"} <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
           {links.code ? <a className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-4 py-2 font-semibold" href={links.code}>Code <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
           {links.paper ? <a className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-4 py-2 font-semibold" href={links.paper}>Paper <ArrowUpRight className="ml-2 h-4 w-4" /></a> : null}
         </div>
+
+        {isBioEvidence ? (
+          <div className="mt-7 border-t border-[rgba(var(--line),0.14)] pt-5 text-sm leading-relaxed text-[rgb(var(--muted))]">
+            BioEvidence contains the detailed live view of the TREC BioGen questions, retrieved evidence, generated
+            answers, and citations. <Link className="font-semibold text-[rgb(var(--fg))] underline underline-offset-4" href="/projects/trec-biogen">Read the TREC system case study →</Link>
+          </div>
+        ) : null}
+
+        {isTrec ? (
+          <div className="mt-7 border-t border-[rgba(var(--line),0.14)] pt-5 text-sm leading-relaxed text-[rgb(var(--muted))]">
+            This research system continues inside BioEvidence, where the detailed runs can be explored live. <Link className="font-semibold text-[rgb(var(--fg))] underline underline-offset-4" href="/projects/bioevidence-ai">See the BioEvidence product case study →</Link>
+          </div>
+        ) : null}
       </div>
 
       <Separator />

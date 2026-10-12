@@ -12,6 +12,8 @@ export const site = {
   links: {
     github: "https://github.com/cbsag",
     linkedin: "https://www.linkedin.com/in/cbsag/",
+    scholar: "https://scholar.google.com/citations?user=jNUELCoAAAAJ&hl=en",
+    thesis: "https://spectrum.library.concordia.ca/id/eprint/997873/",
     bioEvidence: "https://bioevidence.cbsag.me/",
     trecDemo: "https://bioevidence.cbsag.me/ask?mode=examples",
     resume: "/cv",

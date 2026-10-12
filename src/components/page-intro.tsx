@@ -10,8 +10,7 @@ type PageIntroProps = {
 
 export default function PageIntro({ eyebrow, title, desc, className, actions }: PageIntroProps) {
   return (
-    <div className={cn("relative overflow-hidden rounded-[2rem] border border-[rgba(var(--line),0.12)] bg-[rgba(var(--panel),0.62)] px-6 py-8 sm:px-9 sm:py-10", className)}>
-      <div className="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-[rgba(var(--accent-b),0.10)] blur-3xl" />
+    <div className={cn("relative border-b border-[rgba(var(--line),0.16)] px-0 py-8 sm:py-10", className)}>
       <div className="relative flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
       <div className="max-w-3xl">
         {eyebrow ? (

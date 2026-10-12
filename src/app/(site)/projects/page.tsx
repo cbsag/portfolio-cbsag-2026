@@ -175,7 +175,7 @@ export default function ProjectsPage() {
 
                 return (
                   <Reveal key={project.slug} delay={0.03 * (groupIndex + projectIndex)}>
-                    <Panel className="panel-tint panel-tint-project p-5 transition hover:-translate-y-0.5 hover:shadow-lg">
+                    <Panel className="panel-tint panel-tint-project p-5 transition hover:-translate-y-0.5">
                       <div className="flex flex-wrap gap-2">
                         {(project.frontmatter.tags ?? []).slice(0, 4).map((tag: string) => (
                           <Badge key={tag} className="text-mono">

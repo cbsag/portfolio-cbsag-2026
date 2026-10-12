@@ -151,6 +151,18 @@ export default function AboutPage() {
                       </a>
                       <a
                         className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"
+                        href={site.links.scholar}
+                      >
+                        Google Scholar
+                      </a>
+                      <a
+                        className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"
+                        href={site.links.thesis}
+                      >
+                        Published thesis
+                      </a>
+                      <a
+                        className="inline-flex items-center rounded-xl border border-[rgba(var(--line),0.16)] px-3 py-2 transition hover:bg-[rgba(var(--panel-a),0.06)]"
                         href={site.links.bioEvidence}
                       >
                         BioEvidence

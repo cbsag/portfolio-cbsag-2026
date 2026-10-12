@@ -110,7 +110,7 @@ export default function ProjectsFilter({ items, basePath }: { items: CardItem[];
 
       <div className="grid gap-4 md:grid-cols-2">
         {filtered.map((p) => (
-          <Panel key={p.slug} className="panel-tint panel-tint-project p-5 transition hover:-translate-y-0.5 hover:shadow-lg">
+          <Panel key={p.slug} className="panel-tint panel-tint-project p-5 transition hover:-translate-y-0.5">
             <div className="flex flex-wrap gap-2">
               {(p.tags ?? []).slice(0, 5).map((t) => (
                 <Badge key={t} className="text-mono">{t}</Badge>

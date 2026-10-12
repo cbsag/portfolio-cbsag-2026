@@ -37,23 +37,21 @@ export default function Nav() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[rgba(var(--line),0.10)] bg-[rgba(var(--bg),0.84)] backdrop-blur-2xl">
+    <header className="sticky top-0 z-50 border-b border-[rgba(var(--line),0.12)] bg-[rgba(var(--bg),0.92)] backdrop-blur-xl">
       <div className="container flex h-16 items-center gap-4">
-        <Link href="/" className="group flex min-w-0 items-center gap-3" aria-label="Ganesh Chandrasekar, home">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[rgb(var(--fg))] text-xs font-bold tracking-[0.08em] text-[rgb(var(--bg))] shadow-[0_10px_24px_-14px_rgba(17,24,39,0.8)] transition group-hover:-rotate-3">
-            GC
-          </span>
-          <span className="hidden min-w-0 sm:block">
-            <span className="block truncate text-sm font-semibold tracking-tight">Ganesh Chandrasekar</span>
-            <span className="block text-[10px] uppercase tracking-[0.16em] text-[rgb(var(--muted))] text-mono">AI / ML Engineer</span>
-          </span>
+        <Link
+          href="/"
+          className="group inline-flex shrink-0 items-center text-[rgb(var(--fg))]"
+          aria-label="Ganesh Chandrasekar, home"
+        >
+          <span className="site-signature h-9 w-10 transition-transform duration-300 group-hover:-rotate-2" aria-hidden="true" />
         </Link>
 
         <div className="ml-auto flex min-w-0 items-center md:hidden">
           <span className="truncate text-xs font-medium text-[rgb(var(--muted))]">{activeLink.label}</span>
         </div>
 
-        <nav className="ml-auto hidden min-w-0 items-center gap-1 overflow-x-auto text-sm whitespace-nowrap md:flex">
+        <nav className="ml-auto hidden min-w-0 items-center gap-0.5 overflow-x-auto text-sm whitespace-nowrap md:flex">
           {links.map((l) => {
             const active =
               l.href === "/"
@@ -65,7 +63,7 @@ export default function Nav() {
                 href={l.href}
                 aria-current={active ? "page" : undefined}
                 className={cn(
-                  "inline-flex items-center rounded-xl px-3 py-2 text-[13px] text-[rgb(var(--muted))] transition",
+                  "inline-flex items-center rounded-lg px-2.5 py-2 text-[13px] text-[rgb(var(--muted))] transition",
                   "hover:bg-[rgba(var(--line),0.05)] hover:text-[rgb(var(--fg))]",
                   active &&
                     "bg-[rgba(var(--line),0.08)] font-semibold text-[rgb(var(--fg))] hover:bg-[rgba(var(--line),0.08)]"
@@ -81,7 +79,7 @@ export default function Nav() {
           <Button
             variant="ghost"
             size="icon"
-            className="rounded-xl"
+            className="rounded-lg"
             aria-label="Toggle theme"
             onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
           >
@@ -111,7 +109,7 @@ export default function Nav() {
         )}
       >
         <div className="container pb-4 pt-1">
-          <nav className="interface-panel grid gap-1 p-2 shadow-xl">
+          <nav className="interface-panel grid gap-1 p-2">
             {links.map((l) => {
               const active =
                 l.href === "/"

@@ -1,6 +1,5 @@
 import Reveal from "@/components/reveal";
 import PageIntro from "@/components/page-intro";
-import { Panel } from "@/components/ui/panel";
 import { experiences } from "@/lib/experience";
 
 export default function ExperiencePage() {
@@ -9,34 +8,36 @@ export default function ExperiencePage() {
       <PageIntro
         eyebrow="Career timeline"
         title="Experience"
-        desc="Research, machine learning, product engineering, and software roles—from undergraduate experimentation to graduate AI systems."
+        desc="Five roles across biomedical AI research, procurement software, machine-learning experiments, and interactive systems."
       />
 
-      <div className="relative mt-10 space-y-5 before:absolute before:bottom-8 before:left-[1.42rem] before:top-8 before:w-px before:bg-[rgba(var(--line),0.12)] sm:before:left-[2rem]">
+      <div className="mt-10 border-t border-[rgba(var(--line),0.16)]">
         {experiences.map((item, index) => (
-          <Reveal key={item.id} delay={0.03 * index}>
-            <Panel className="panel-tint panel-tint-experience ml-12 p-6 sm:ml-16 sm:p-7">
-              <div className="absolute -left-[2.42rem] top-7 grid h-8 w-8 place-items-center rounded-full border border-[rgba(var(--line),0.14)] bg-[rgb(var(--bg))] text-[10px] font-bold text-[rgb(var(--muted))] text-mono sm:-left-[3.05rem]">
+          <Reveal key={item.id} delay={0.025 * index}>
+            <article className="grid gap-5 border-b border-[rgba(var(--line),0.14)] py-9 lg:grid-cols-[0.2fr_0.34fr_1fr] lg:gap-10">
+              <div className="text-xs uppercase tracking-[0.14em] text-[rgb(var(--muted))] text-mono">
                 {String(index + 1).padStart(2, "0")}
-              </div>
-              <div className="flex flex-wrap items-start justify-between gap-3">
-                <div>
-                  <h2 className="text-lg font-semibold tracking-tight">{item.role}</h2>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                    {item.organization} · {item.location}
-                  </p>
-                </div>
-                <span className="text-xs uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 text-mono">
-                  {item.period}
-                </span>
+                <div className="mt-2 normal-case leading-relaxed tracking-normal">{item.period}</div>
               </div>
 
-              <div className="mt-5 grid gap-3 text-sm leading-relaxed text-[rgb(var(--muted))] lg:grid-cols-2">
-                {item.bullets.map((bullet) => (
-                  <div key={bullet} className="signal-card p-4">{bullet}</div>
-                ))}
+              <div>
+                <h2 className="text-xl font-semibold tracking-[-0.025em]">{item.role}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                  {item.organization}
+                  <br />
+                  {item.location}
+                </p>
               </div>
-            </Panel>
+
+              <ul className="space-y-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                {item.bullets.map((bullet) => (
+                  <li key={bullet} className="grid grid-cols-[auto_1fr] gap-3">
+                    <span className="mt-[0.62rem] h-1 w-1 rounded-full bg-[rgb(var(--accent-a))]" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
           </Reveal>
         ))}
       </div>

@@ -42,6 +42,7 @@ body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
 }
 
 body {
@@ -49,17 +50,17 @@ body {
   color: rgb(var(--fg));
   font-family: var(--font-body);
   background:
-    radial-gradient(900px 540px at 94% -8%, rgba(var(--accent-b), 0.13), transparent 60%),
-    radial-gradient(720px 480px at -5% 20%, rgba(var(--accent-a), 0.12), transparent 62%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.50), transparent 28%),
+    radial-gradient(900px 540px at 94% -8%, rgba(var(--accent-b), 0.08), transparent 60%),
+    radial-gradient(720px 480px at -5% 20%, rgba(var(--accent-a), 0.07), transparent 62%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36), transparent 28%),
     rgb(var(--bg));
   @apply antialiased;
 }
 
 .dark body {
   background:
-    radial-gradient(900px 580px at 94% -8%, rgba(var(--accent-b), 0.18), transparent 62%),
-    radial-gradient(780px 520px at -8% 20%, rgba(var(--accent-a), 0.13), transparent 64%),
+    radial-gradient(900px 580px at 94% -8%, rgba(var(--accent-b), 0.10), transparent 62%),
+    radial-gradient(780px 520px at -8% 20%, rgba(var(--accent-a), 0.08), transparent 64%),
     rgb(var(--bg));
 }
 
@@ -69,7 +70,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.42;
+  opacity: 0.18;
   background-image: radial-gradient(rgba(var(--line), 0.16) 0.7px, transparent 0.7px);
   background-size: 18px 18px;
   -webkit-mask-image: linear-gradient(to bottom, black, transparent 72%);
@@ -99,9 +100,8 @@ button {
 
 .glow {
   background:
-    radial-gradient(640px 420px at 22% 28%, rgba(var(--accent-a), 0.15), transparent 62%),
-    radial-gradient(720px 480px at 78% 24%, rgba(var(--accent-b), 0.14), transparent 64%),
-    radial-gradient(520px 340px at 66% 76%, rgba(var(--accent-c), 0.09), transparent 62%);
+    radial-gradient(640px 420px at 22% 28%, rgba(var(--accent-a), 0.08), transparent 62%),
+    radial-gradient(720px 480px at 78% 24%, rgba(var(--accent-b), 0.08), transparent 64%);
 }
 
 .bg-gradient-pattern {
@@ -131,20 +131,16 @@ h3 {
 }
 
 .interface-panel {
-  background: rgba(var(--panel), 0.94);
-  border: 1px solid rgba(var(--line), 0.14);
-  box-shadow:
-    0 24px 70px -46px rgba(17, 24, 39, 0.44),
-    0 1px 0 rgba(255, 255, 255, 0.70) inset;
-  border-radius: 24px;
+  background: rgba(var(--panel), 0.72);
+  border: 1px solid rgba(var(--line), 0.16);
+  box-shadow: none;
+  border-radius: 20px;
 }
 
 .dark .interface-panel {
-  background: rgba(var(--panel), 0.90);
-  border-color: rgba(var(--line), 0.12);
-  box-shadow:
-    0 30px 80px -46px rgba(0, 0, 0, 0.92),
-    0 1px 0 rgba(255, 255, 255, 0.05) inset;
+  background: rgba(var(--panel), 0.74);
+  border-color: rgba(var(--line), 0.15);
+  box-shadow: none;
 }
 
 .interface-hairline {
@@ -157,11 +153,7 @@ h3 {
 }
 
 .panel-tint::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  border-radius: 24px 0 0 24px;
+  display: none;
 }
 
 .panel-tint-project::before {
@@ -202,13 +194,21 @@ h3 {
 }
 
 .signal-card {
-  border: 1px solid rgba(var(--line), 0.12);
-  background: rgba(var(--panel-a), 0.42);
-  border-radius: 18px;
+  border: 1px solid rgba(var(--line), 0.15);
+  background: rgba(var(--panel-a), 0.30);
+  border-radius: 16px;
 }
 
 .dark .signal-card {
+  border-color: rgba(var(--line), 0.14);
   background: rgba(var(--panel-a), 0.035);
+}
+
+.site-signature {
+  display: inline-block;
+  background-color: currentColor;
+  -webkit-mask: url("/logo.svg") center / contain no-repeat;
+  mask: url("/logo.svg") center / contain no-repeat;
 }
 
 .prose-tight {
