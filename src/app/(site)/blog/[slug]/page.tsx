@@ -15,8 +15,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="container pt-10">
-      <Link href="/blog" className="text-sm text-zinc-600 underline underline-offset-4 dark:text-zinc-400">
-        Back to blog
+      <Link href="/blog" className="text-xs font-semibold uppercase tracking-[0.14em] text-[rgb(var(--muted))] text-mono">
+        ← Back to notes
       </Link>
 
       <div className="mt-5 flex flex-wrap gap-2">
@@ -27,8 +27,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         ))}
       </div>
 
-      <h1 className="mt-4 text-3xl font-semibold tracking-tight">{doc.frontmatter.title}</h1>
-      <p className="mt-3 max-w-3xl text-zinc-600 dark:text-zinc-400">{doc.frontmatter.summary}</p>
+      <h1 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.045em] sm:text-5xl">{doc.frontmatter.title}</h1>
+      <p className="mt-4 max-w-3xl text-base leading-relaxed text-[rgb(var(--muted))]">{doc.frontmatter.summary}</p>
 
       <div className="mt-3 text-sm text-zinc-500 dark:text-zinc-500">
         {doc.frontmatter.date} • {doc.readingTime}
@@ -36,7 +36,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
       <Separator />
 
-      <Panel className="panel-tint panel-tint-publication p-6">
+      <Panel className="panel-tint panel-tint-publication p-6 sm:p-10">
         <article className="prose-tight">{renderDocContent(doc.content)}</article>
       </Panel>
     </div>

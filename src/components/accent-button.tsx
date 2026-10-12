@@ -8,20 +8,13 @@ export default function AccentButton({
   return (
     <span
       className={cn(
-        "inline-flex rounded-xl p-[1px]",
-        "bg-[linear-gradient(90deg,rgba(var(--accent-a),0.95),rgba(var(--accent-b),0.95),rgba(var(--accent-c),0.9))]",
+        "inline-flex h-11 items-center justify-center rounded-2xl bg-[rgb(var(--fg))] px-5 text-sm font-semibold text-[rgb(var(--bg))]",
+        "shadow-[0_16px_32px_-20px_rgba(17,24,39,0.8)] transition hover:-translate-y-0.5 hover:shadow-[0_18px_36px_-20px_rgba(17,24,39,0.95)]",
         className
       )}
       {...props}
     >
-      <span
-        className={cn(
-          "inline-flex h-10 items-center justify-center rounded-[11px] border border-transparent bg-[rgb(var(--bg))]",
-          "px-4 text-sm font-medium tracking-tight text-[rgb(var(--fg))]"
-        )}
-      >
-        {children}
-      </span>
+      {children}
     </span>
   );
 }

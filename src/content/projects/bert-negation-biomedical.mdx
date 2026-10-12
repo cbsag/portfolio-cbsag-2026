@@ -1,9 +1,9 @@
 ---
 title: "Biomedical negation detection with Transformers, CRF, and PPO"
 date: "2024-07-01"
-summary: "Fine-tuned BERT-family models for negation cue and scope detection, then expanded the work with CRF, hierarchical, and PPO-based sequence-labeling approaches."
+summary: "Fine-tuned BERT-family models for negation cue and scope tagging, then compared CRF, hierarchical, and PPO-based sequence-labeling approaches."
 tags: ["NLP", "Sequence Labeling", "Transformers", "RL", "Biomedical NLP"]
-highlight: "Extended the baseline into CRF and PPO-based pipelines to improve minority-label detection and model label dependencies more explicitly."
+highlight: "Compared supervised and PPO-based approaches using aggregate and label-level evaluation to understand minority-class behavior."
 links:
   code: "https://github.com/cbsag/Biomedical-Negation-Detection"
   paper: ""
@@ -14,12 +14,12 @@ links:
 Detect negation cues and their scope in biomedical text with models that can handle imbalanced labels and structured output behavior.
 
 ## System design
-- Fine-tuned BERT, BioBERT, and ClinicalBERT with BIO-style token labeling
-- Added CRF and hierarchical classification variants to model label dependencies
+- Fine-tuned BERT, BioBERT, and ClinicalBERT for cue and scope tagging
+- Compared CRF and hierarchical variants under severe class imbalance
 - Trained PPO-based sequence-labeling policies using rewards derived from human-annotated spans
-- Evaluated cue and scope quality with token-level and span-level consistency checks
+- Compared aggregate and label-level results to understand minority-class behavior
 
 ## Results
 - Established strong supervised baselines for negation cue and scope detection
-- Improved minority-label behavior with reinforcement-style training over the supervised baseline
-- Created a reusable experimental setup for later biomedical QA and evidence-quality work
+- Compared PPO-based sequence labeling with supervised approaches
+- Produced detailed evidence on model behavior under severe label imbalance

@@ -1,44 +1,57 @@
 export default function FocusStrip() {
   return (
-    <section className="relative">
-      <div className="container py-16">
-        <div className="grid items-center gap-10 lg:grid-cols-[.95fr_1.05fr]">
+    <section className="relative border-y border-[rgba(var(--line),0.08)] bg-[rgba(var(--panel),0.34)]">
+      <div className="container py-20">
+        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
-              Current focus
-            </div>
-            <h3 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">
-              Evidence-grounded AI, from research to deployment
-            </h3>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              I completed my MCompSc thesis on evidence-grounded biomedical question answering in August 2026. I am
-              now focused on retrieval, RAG, LLM evaluation, and production AI systems that need strong engineering.
+            <div className="eyebrow">Capabilities</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+              Broad AI/ML foundations, with retrieval depth.
+            </h2>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
+              My work spans classical machine learning, transformer models, retrieval, agentic systems, and the software
+              needed to make those systems observable and useful.
             </p>
 
-            <div className="mt-6 space-y-2 text-sm leading-relaxed text-[rgb(var(--muted))]">
-              <div>- Open to full-time AI/ML, NLP, information retrieval, and software engineering roles</div>
-              <div>- Retrieval, ranking, evaluation, and evidence-grounded language systems</div>
-              <div>- End-to-end delivery spanning modeling, APIs, dashboards, and analysis tooling</div>
+            <div className="mt-7 space-y-3 text-sm leading-relaxed text-[rgb(var(--muted))] text-mono">
+              <div>01 · Model training, evaluation, and error analysis</div>
+              <div>02 · Retrieval, reranking, RAG, and agentic tool use</div>
+              <div>03 · Python and TypeScript delivery across APIs and interfaces</div>
             </div>
           </div>
 
-          <div className="interface-panel panel-tint panel-tint-project p-6">
-            <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
-              What I bring
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="signal-card p-5">
+              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--accent-a))] text-mono">
+                AI & machine learning
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                PyTorch, scikit-learn, Hugging Face, BERT, BioBERT, CRF, NLP, text classification, and NER.
+              </p>
             </div>
-            <div className="mt-4 space-y-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
-              <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Applied AI research:</span> retrieval, RAG,
-                embeddings, sequence labeling, and agentic workflows with LangGraph, MCP, and smolagents.
+            <div className="signal-card p-5">
+              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--accent-b))] text-mono">
+                Retrieval & AI systems
               </div>
-              <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Evaluation and analysis:</span> shared-task
-                baselines, error analysis, LLM and human feedback loops, and inspection dashboards.
+              <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                BM25, Pyserini/Lucene, MedCPT, FAISS, cross-encoder reranking, LangChain, LangGraph, MCP, and smolagents.
+              </p>
+            </div>
+            <div className="signal-card p-5">
+              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--accent-c))] text-mono">
+                Software & cloud
               </div>
-              <div>
-                <span className="font-medium text-[rgb(var(--fg))]">Software delivery:</span> Python, TypeScript,
-                REST APIs, GCP, Docker, and practical interfaces that make models usable.
+              <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                REST APIs, Flask, Node.js, Next.js, Docker, GCP, AWS, Supabase, Linux, and Git.
+              </p>
+            </div>
+            <div className="signal-card p-5">
+              <div className="text-xs font-semibold uppercase tracking-[0.16em] text-[rgb(var(--fg))] text-mono">
+                Model infrastructure
               </div>
+              <p className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
+                Slurm, vLLM, Ollama, GPU inference, repeatable evaluation, and inspectable failure analysis.
+              </p>
             </div>
           </div>
         </div>

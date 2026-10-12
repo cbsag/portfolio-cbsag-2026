@@ -66,7 +66,7 @@ export default function AboutProfileColumn({ name, role, location, availability 
           </div>
           <div className="mt-2 text-base font-semibold tracking-tight">{location}</div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
-            Research-minded engineering work, with strong delivery and evaluation habits.
+            AI/ML engineering across research, product workflows, and full-stack application delivery.
           </p>
         </Panel>
 
@@ -74,7 +74,7 @@ export default function AboutProfileColumn({ name, role, location, availability 
           <div className="text-xs uppercase tracking-[0.16em] text-zinc-500 dark:text-zinc-400 text-mono">
             Current status
           </div>
-          <div className="mt-2 text-base font-semibold tracking-tight">Thesis defended · August 2026</div>
+          <div className="mt-2 text-base font-semibold tracking-tight">MCompSc completed · August 2026</div>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">{availability}</p>
         </Panel>
       </div>

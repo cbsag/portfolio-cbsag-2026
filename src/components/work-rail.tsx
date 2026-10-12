@@ -19,13 +19,13 @@ export default function WorkRail() {
   return (
     <section className="relative">
       <div id="enter" />
-      <div className="container py-16">
+      <div className="container py-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Featured</div>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Selected work</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              Recent case studies across retrieval, evaluation, applied NLP, and production-minded software work.
+            <div className="eyebrow">Featured work</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Systems with evidence, not just output.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
+              Selected work spanning biomedical QA, agentic retrieval, model evaluation, and full-stack AI delivery.
             </p>
           </div>
 
@@ -39,11 +39,11 @@ export default function WorkRail() {
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.25fr_.75fr]">
           {featured ? (
-            <div className="interface-panel panel-tint panel-tint-project p-7">
+            <div className="interface-panel panel-tint panel-tint-project p-7 sm:p-8">
               <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
                 {featured.frontmatter.date}
               </div>
-              <div className="mt-2 text-xl font-semibold tracking-tight">{featured.frontmatter.title}</div>
+              <div className="mt-3 text-2xl font-semibold tracking-[-0.03em]">{featured.frontmatter.title}</div>
               <div className="mt-3 text-sm leading-relaxed text-[rgb(var(--muted))]">
                 {featured.frontmatter.summary}
               </div>
@@ -80,8 +80,8 @@ export default function WorkRail() {
 
           <div className="space-y-5">
             {secondary.map((project) => (
-              <div key={project.slug} className="pb-5 interface-hairline">
-                <div className="pt-5">
+              <div key={project.slug} className="signal-card p-5 transition hover:-translate-y-0.5">
+                <div>
                   <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
                     {project.frontmatter.date}
                   </div>

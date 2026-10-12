@@ -12,12 +12,16 @@ export default function PublicationsPage() {
 
   return (
     <div className="container pt-10">
-      <PageIntro title="Publications" desc="Papers, system descriptions, and research artifacts with quick access to the primary links." />
+      <PageIntro
+        eyebrow="Published work"
+        title="Publications"
+        desc="Peer-reviewed papers and shared-task system descriptions spanning biomedical question answering and computer architecture."
+      />
 
       <div className="mt-10 grid gap-4">
         {pubs.map((p, i) => (
           <Reveal key={p.slug} delay={0.03 * i}>
-            <Panel className="panel-tint panel-tint-publication p-5">
+            <Panel className="panel-tint panel-tint-publication p-6 sm:p-7">
               <div className="flex flex-wrap gap-2">
                 {(p.frontmatter.venue ? [p.frontmatter.venue] : []).map((t: string) => (
                   <Badge key={t} className="text-mono">
@@ -31,7 +35,7 @@ export default function PublicationsPage() {
                 ))}
               </div>
 
-              <h2 className="mt-3 text-lg font-semibold tracking-tight">{p.frontmatter.title}</h2>
+              <h2 className="mt-4 max-w-4xl text-xl font-semibold tracking-[-0.025em] sm:text-2xl">{p.frontmatter.title}</h2>
               <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{p.frontmatter.authors}</p>
 
               <div className="mt-4 flex flex-wrap gap-2">

@@ -6,13 +6,13 @@ export default function ExperienceRail() {
 
   return (
     <section className="relative">
-      <div className="container py-16">
+      <div className="container py-20">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Experience</div>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Research, teaching, and industry</h2>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-              Full CV roles, condensed into a clean timeline.
+            <div className="eyebrow">Experience</div>
+            <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Research depth. Product discipline.</h2>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
+              A path from undergraduate ML research to production workflows and evidence-grounded AI systems.
             </p>
           </div>
 

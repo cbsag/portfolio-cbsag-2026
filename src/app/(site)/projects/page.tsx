@@ -11,7 +11,7 @@ const curatedGroups = [
     eyebrow: "Research systems",
     title: "Retrieval, grounding, and evaluation work",
     desc: "Projects where evidence quality, system behavior, and inspection mattered as much as raw model output.",
-    slugs: ["medhopqa", "insomnia-shared-task", "bert-negation-biomedical"]
+    slugs: ["trec-biogen", "medhopqa", "insomnia-shared-task", "bert-negation-biomedical"]
   },
   {
     eyebrow: "Applied builds",
@@ -43,7 +43,7 @@ function isDoc(item: Doc | undefined): item is Doc {
 export default function ProjectsPage() {
   const docs = getAllDocs("projects");
   const bySlug = new Map(docs.map((doc) => [doc.slug, doc]));
-  const featured = bySlug.get("trec-biogen") ?? docs[0];
+  const featured = bySlug.get("bioevidence-ai") ?? docs[0];
   const groups = curatedGroups
     .map((group) => ({
       ...group,
@@ -55,11 +55,11 @@ export default function ProjectsPage() {
   const featuredDemo = getExternalLink(featured?.frontmatter.links?.demo);
   const featuredPaper = getExternalLink(featured?.frontmatter.links?.paper);
   const featuredSignals: FeaturedSignal[] =
-    featured?.slug === "trec-biogen"
+    featured?.slug === "bioevidence-ai"
       ? [
-          { label: "Corpus", value: "26.8M PubMed documents" },
-          { label: "Pipeline", value: "Sparse + dense retrieval with reranking" },
-          { label: "Output", value: "Evidence-linked inspection viewer" }
+          { label: "Architecture", value: "Retrieval → reranking → generation → validation" },
+          { label: "Integrations", value: "PubMed, Europe PMC, and ClinicalTrials.gov" },
+          { label: "Application", value: "Python APIs, Next.js, and Supabase" }
         ]
       : (featured?.frontmatter.tags ?? []).slice(0, 3).map((tag: string) => ({
           label: "Focus",
@@ -69,8 +69,9 @@ export default function ProjectsPage() {
   return (
     <div className="container pt-10">
       <PageIntro
+        eyebrow="Selected systems"
         title="Projects"
-        desc="A curated view of research systems, applied builds, and smaller experiments. Start with the strongest case study, then scan the rest by type."
+        desc="A curated view of AI research, retrieval systems, product builds, and foundational experiments—organized by what each project demonstrates."
       />
 
       <div className="mt-10 space-y-12">
@@ -155,7 +156,7 @@ export default function ProjectsPage() {
         ) : null}
 
         {groups.map((group, groupIndex) => (
-          <section key={group.title}>
+          <section key={group.title} className="border-t border-[rgba(var(--line),0.10)] pt-10">
             <div className="max-w-3xl">
               <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">
                 {group.eyebrow}

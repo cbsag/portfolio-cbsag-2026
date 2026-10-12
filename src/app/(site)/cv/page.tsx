@@ -6,8 +6,9 @@ export default function CVPage() {
   return (
     <div className="container pt-10">
       <PageIntro
+        eyebrow="Latest profile"
         title="CV"
-        desc="View the latest resume in the site, or open the raw PDF if you want the browser's full document viewer."
+        desc="The latest two-page overview of my AI/ML research, product engineering experience, technical skills, projects, education, and publications."
         actions={
           <>
             <a className="underline underline-offset-4" href={site.links.resumeFile} target="_blank" rel="noreferrer">
@@ -20,8 +21,8 @@ export default function CVPage() {
         }
       />
 
-      <div className="mt-8 rounded-2xl border border-[rgba(var(--line),0.10)] bg-[rgba(var(--panel-a),0.18)] px-4 py-3 text-sm leading-relaxed text-zinc-600 dark:bg-[rgba(var(--panel-a),0.04)] dark:text-zinc-300">
-        Best on desktop. On smaller screens, open the PDF directly for a cleaner reading view.
+      <div className="mt-8 signal-card px-5 py-4 text-sm leading-relaxed text-[rgb(var(--muted))]">
+        Updated October 2026. For the cleanest mobile reading experience, open the PDF directly.
       </div>
 
       <div className="mt-6">

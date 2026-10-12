@@ -4,13 +4,12 @@ import { site } from "@/lib/site";
 export default function ContactCTA() {
   return (
     <section className="relative">
-      <div className="container py-16">
-        <div className="interface-panel panel-tint panel-tint-publication p-8">
-          <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">Contact</div>
-          <div className="mt-3 text-2xl font-semibold tracking-tight sm:text-3xl">Let&apos;s talk</div>
-          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))]">
-            If you&apos;re hiring for AI/ML, NLP, RAG, information retrieval, or software engineering work, I&apos;d be
-            happy to connect.
+      <div className="container py-20">
+        <div className="interface-panel panel-tint panel-tint-publication p-8 sm:p-10">
+          <div className="eyebrow">Contact</div>
+          <div className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">Building an AI product or team?</div>
+          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
+            I&apos;m open to AI/ML and software engineering roles where thoughtful evaluation and reliable delivery both matter.
           </p>
 
           <div className="mt-6 flex flex-wrap gap-3">

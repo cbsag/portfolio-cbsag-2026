@@ -9,34 +9,34 @@ import Link from "next/link";
 import { experiences } from "@/lib/experience";
 
 export default function AboutPage() {
-  const snapshot = experiences.slice(0, 4);
+  const snapshot = experiences;
 
   return (
     <div className="container pt-10">
       <PageIntro
+        eyebrow="Profile"
         title="About"
-        desc="A more personal view of the work, the direction I am heading, and the kind of systems I want to build next."
+        desc="An AI/ML engineer who moves comfortably between experiments, evaluation, backend services, and product interfaces."
       />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1.02fr_0.98fr] lg:items-start">
         <div className="order-2 space-y-8 lg:order-1">
           <Reveal>
             <Panel className="panel-tint panel-tint-project p-7 sm:p-8">
-              <div className="text-xs uppercase tracking-[0.18em] text-[rgb(var(--muted))] text-mono">About me</div>
-              <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">
-                Research-minded engineering, with a bias for clarity and delivery.
+              <div className="eyebrow">About me</div>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
+                I connect model behavior to the product around it.
               </h2>
 
               <p className="mt-5 max-w-2xl text-sm leading-relaxed text-zinc-700 dark:text-zinc-200 sm:text-base">
                 I&apos;m {site.name}, an AI/ML engineer with a Master of Computer Science from Concordia University. My
-                thesis, <em>Evidence-Grounded Biomedical Question Answering: Design, Analysis, and Evaluation</em>,
-                brought together large-scale retrieval, reranking, LLM inference, and evaluation. I defended it in
-                August 2026.
+                work includes model training and evaluation, retrieval and LLM systems, APIs, and user-facing
+                applications across research and product environments.
               </p>
               <p className="mt-4 max-w-2xl text-sm leading-relaxed text-zinc-600 dark:text-zinc-300 sm:text-base">
-                I do my best work where research depth and engineering constraints both matter. Alongside AI research,
-                I have built GCP-backed APIs and product workflows, so I am comfortable carrying systems from modeling
-                and measurement through backend services and user-facing interfaces.
+                My thesis on evidence-grounded biomedical question answering brought together retrieval, reranking,
+                generation, citation validation, and stage-by-stage evaluation. Before that, I built procurement
+                workflows and GCP-backed integrations for Kissflow, ML research pipelines, and interactive software.
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <SectionHeader
                 eyebrow="Experience"
                 title="Snapshot from my CV"
-                desc="A short version of the roles that shaped how I work."
+                desc="The research, product, and software roles that shaped how I work."
               />
               <Reveal>
                 <Panel className="panel-tint panel-tint-experience p-6">
@@ -97,24 +97,23 @@ export default function AboutPage() {
               <div>
                 <SectionHeader
                   eyebrow="Approach"
-                  title="How I like to work"
-                  desc="The kind of teams, problems, and engineering habits that bring out my best work."
+                  title="How I approach systems"
+                  desc="The habits I bring to machine learning and software delivery."
                 />
                 <Reveal>
                   <Panel className="panel-tint panel-tint-project p-6">
                     <div className="space-y-4 text-sm leading-relaxed text-zinc-700 dark:text-zinc-200">
                       <div>
-                        <span className="font-medium text-[rgb(var(--fg))]">Measure first.</span> I care about systems
-                        that are strong enough to be useful outside a paper, not just impressive in isolation.
+                        <span className="font-medium text-[rgb(var(--fg))]">Separate the stages.</span> Retrieval,
+                        modeling, grounding, and citation behavior need their own measurements and failure analysis.
                       </div>
                       <div>
-                        <span className="font-medium text-[rgb(var(--fg))]">Bridge research with interfaces.</span> I
-                        like building evaluation views, tooling, and APIs that make model behavior easier to inspect.
+                        <span className="font-medium text-[rgb(var(--fg))]">Make behavior inspectable.</span> I build
+                        evaluation views, tooling, and APIs that make model decisions easier to understand.
                       </div>
                       <div>
-                        <span className="font-medium text-[rgb(var(--fg))]">Ship clearly.</span> The strongest work
-                        usually comes from turning complex pipelines into something another person can actually trust and
-                        use.
+                        <span className="font-medium text-[rgb(var(--fg))]">Finish the product path.</span> Strong
+                        models still need reliable services, validations, interfaces, and thoughtful user workflows.
                       </div>
                     </div>
                   </Panel>

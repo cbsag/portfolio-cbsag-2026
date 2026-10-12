@@ -1,9 +1,9 @@
 ---
-title: "BioEvidence AI: Local-First Biomedical Question Answering"
+title: "BioEvidence AI: Evidence-Grounded Biomedical Question Answering"
 date: "2026-08-01"
-summary: "A full-stack biomedical QA application combining retrieval over a 14.9M-record PubMed index, adaptive reranking, local LLM generation, and citation validation."
-tags: ["RAG", "TREC BioGen", "Pyserini", "Lucene", "Local LLMs", "Citation Validation", "Next.js"]
-highlight: "Integrates PubMed, Europe PMC, and ClinicalTrials.gov into a real-time, on-device query-to-citation workflow."
+summary: "A full-stack biomedical QA application with independently inspectable retrieval, reranking, generation, and citation-validation stages."
+tags: ["Python", "Pyserini", "RAG", "Local LLMs", "Next.js", "Supabase", "REST APIs"]
+highlight: "Connects PubMed, Europe PMC, and ClinicalTrials.gov APIs to a Next.js interface with Supabase authentication and application data."
 links:
   code: ""
   paper: ""
@@ -11,20 +11,19 @@ links:
 ---
 
 ## Overview
-BioEvidence is the productized, local-first continuation of my TREC BioGen work. It turns biomedical questions into evidence-linked answers while keeping model inference local and the retrieval trail visible. Its Examples mode also provides a detailed view of the TREC system's questions, retrieved evidence, answers, and citations.
+BioEvidence turns the biomedical QA research pipeline into a working application where retrieval, reranking, generation, and citation validation can be inspected independently. Its Examples mode also provides a detailed view of TREC questions, evidence, answers, and citations.
 
 ## System design
-- Pyserini/Lucene retrieval over a 14.9M-record PubMed index
-- Adaptive reranking and evidence selection
-- Local LLM generation with on-device inference
-- Citation validation for generated answers
-- Live integrations with PubMed/NCBI, Europe PMC, and ClinicalTrials.gov
-- Detailed TREC BioGen examples for inspecting the full question-to-citation path
+- Pyserini/Lucene retrieval with reranking and evidence selection
+- Local LLM generation followed by citation validation
+- Python backend integrating PubMed/NCBI, Europe PMC, and ClinicalTrials.gov APIs
+- Supabase authentication and application data
+- Next.js interface for live questions and detailed TREC BioGen examples
 
 ## What was built
-- Real-time query-to-citation pipeline spanning PubMed, Europe PMC, and ClinicalTrials.gov
+- Inspectable, stage-separated query-to-citation pipeline
 - User-facing Next.js application for live answers and saved TREC example inspection
-- Local-first inference path designed for privacy and control
+- Authentication and application data through Supabase
 
 ## Result
-The TREC research pipeline and its evaluation artifacts now connect directly to a practical AI application with inspectable evidence and direct links to biomedical sources.
+The TREC research pipeline and its evaluation artifacts now connect to a practical application with inspectable evidence, API-backed biomedical sources, and a complete user-facing workflow.
