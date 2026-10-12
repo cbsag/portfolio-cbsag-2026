@@ -25,8 +25,8 @@ export default function Nav() {
   const { resolvedTheme, setTheme } = useTheme();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { scrollY } = useScroll();
-  const homeLogoOpacity = useTransform(scrollY, [0, 220], [0, 1]);
-  const homeLogoScale = useTransform(scrollY, [0, 220], [0.72, 1]);
+  const homeLogoOpacity = useTransform(scrollY, [260, 460], [0, 1]);
+  const homeLogoScale = useTransform(scrollY, [260, 460], [0.62, 1]);
 
   const activeLink = useMemo(
     () =>

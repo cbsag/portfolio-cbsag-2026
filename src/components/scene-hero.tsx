@@ -7,11 +7,13 @@ import { site } from "@/lib/site";
 
 export default function SceneHero() {
   const { scrollY } = useScroll();
-  const logoY = useTransform(scrollY, [0, 460], [0, -150]);
-  const logoScale = useTransform(scrollY, [0, 460], [1, 0.62]);
-  const logoOpacity = useTransform(scrollY, [0, 320, 460], [1, 0.82, 0]);
+  const wordmarkY = useTransform(scrollY, [0, 460], [0, 350]);
+  const logoScale = useTransform(scrollY, [0, 460], [1, 0.2]);
+  const nameX = useTransform(scrollY, [0, 460], [0, -140]);
+  const nameScale = useTransform(scrollY, [0, 460], [1, 0.28]);
+  const wordmarkOpacity = useTransform(scrollY, [0, 260, 460], [1, 1, 0]);
   const copyY = useTransform(scrollY, [0, 460], [0, -46]);
-  const nameOpacity = useTransform(scrollY, [0, 300, 460], [1, 0.9, 0]);
+  const copyOpacity = useTransform(scrollY, [0, 32, 100], [1, 1, 0]);
 
   return (
     <section className="relative flex min-h-[calc(100svh-4rem)] items-center overflow-hidden border-b border-[rgba(var(--line),0.12)]">
@@ -20,19 +22,25 @@ export default function SceneHero() {
 
       <div className="container relative z-10 w-full py-14">
         <div className="mx-auto max-w-6xl">
-          <h1 className="grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] items-start gap-x-[clamp(0.65rem,2vw,1.75rem)]">
+          <h1 className="grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] items-start gap-x-[clamp(0.2rem,0.75vw,0.75rem)]">
             <span className="sr-only">{site.name}</span>
             <motion.span
-              style={{ y: logoY, scale: logoScale, opacity: logoOpacity }}
-              className="site-signature relative aspect-[618/569] w-full origin-center text-[rgb(var(--fg))]"
+              style={{ y: wordmarkY, scale: logoScale, opacity: wordmarkOpacity }}
+              className="site-signature relative aspect-[618/569] w-full origin-top-left text-[rgb(var(--fg))]"
               aria-hidden="true"
             />
             <motion.span
-              style={{ y: copyY, opacity: nameOpacity }}
+              style={{
+                x: nameX,
+                y: wordmarkY,
+                scale: nameScale,
+                opacity: wordmarkOpacity,
+                transformOrigin: "left top"
+              }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
-              className="min-w-0 text-[clamp(2rem,8.2vw,5.6rem)] font-semibold leading-[0.98] tracking-[-0.045em]"
+              className="min-w-0 text-[clamp(2.25rem,8.8vw,6.1rem)] font-semibold leading-[0.98] tracking-[-0.045em]"
               aria-hidden="true"
             >
               <span className="flex h-[clamp(3.68rem,12.89vw,11.51rem)] items-end whitespace-nowrap">
@@ -43,11 +51,8 @@ export default function SceneHero() {
           </h1>
 
           <motion.div
-            style={{ y: copyY }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.55, delay: 0.08, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-7 grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] gap-x-[clamp(0.65rem,2vw,1.75rem)]"
+            style={{ y: copyY, opacity: copyOpacity }}
+            className="mt-7 grid grid-cols-[clamp(4rem,14vw,12.5rem)_minmax(0,1fr)] gap-x-[clamp(0.2rem,0.75vw,0.75rem)]"
           >
             <div className="col-span-2 sm:col-span-1 sm:col-start-2">
               <div className="eyebrow">{site.role}</div>
