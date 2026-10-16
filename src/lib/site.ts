@@ -3,7 +3,7 @@ export const site = {
   tagline: "Machine Learning · NLP · Generative AI · Software Engineering",
   role: "AI/ML Engineer · Researcher",
   introduction:
-    "I build AI applications and evaluate how well they work—from research experiments to reliable software.",
+    "I build and evaluate AI applications. My work covers biomedical retrieval, language models, APIs, and the interfaces people use.",
   currentFocus: {
     active: true,
     label: "Open to full-time AI/ML engineering opportunities."

@@ -30,8 +30,8 @@ export default function WorkRail() {
               Systems built to be inspected.
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
-              Selected work across biomedical question answering, retrieval, evaluation, and software delivery—each
-              showing how the system behaves, not only what it outputs.
+              A few projects across biomedical question answering, retrieval, evaluation, and software engineering.
+              Each one shows what I built, how I tested it, and where it can fail.
             </p>
           </div>
 

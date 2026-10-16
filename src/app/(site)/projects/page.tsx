@@ -71,7 +71,7 @@ export default function ProjectsPage() {
       <PageIntro
         eyebrow="Selected systems"
         title="Projects"
-        desc="A curated view of AI research, retrieval systems, product builds, and foundational experiments—organized by what each project demonstrates."
+        desc="Projects from my research and engineering work, with enough detail to show what I built and how I tested it."
       />
 
       <div className="mt-10 space-y-12">

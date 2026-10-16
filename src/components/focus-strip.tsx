@@ -26,11 +26,11 @@ export default function FocusStrip() {
         <div className="max-w-3xl">
           <div className="eyebrow">Capabilities</div>
           <h2 className="mt-4 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-            What I build—and how I evaluate it.
+            What I build and how I test it.
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-[rgb(var(--muted))] sm:text-base">
-            My work connects modeling, retrieval, evaluation, and software delivery. These are the three parts of that
-            practice, stated without a wall of technology names.
+            Most of my work has three parts: training models, finding reliable evidence, and turning the result into
+            usable software.
           </p>
         </div>
 
